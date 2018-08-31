@@ -15,7 +15,7 @@
         Dim number As Integer
 
         Randomize()
-        number = Int(Rnd() * 6) + 1
+        number = Int(Rnd() * 72) + 1
 
         MessageBox.Show(number)
 
@@ -23,12 +23,24 @@
         'MessageBox.Show("You rolled 1")
         'End If
 
-        '  If (number > 31 And number < 40) Then
-        ' MessageBox.Show("IDK")
-        ' End If
-        'Call Randomize()
+        If (number > 31 And number < 40) Then
+            MessageBox.Show("You get on my nerves")
+        End If
+        Call Randomize()
 
 
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles resbtn.Click
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles selectbox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
     ' Sub Randomize()
