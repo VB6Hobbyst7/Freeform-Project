@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Credscore = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -38,7 +38,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.APR = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -48,14 +48,15 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Debt = New System.Windows.Forms.TextBox()
+        Me.APRbtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'Credscore
         '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 178)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.Credscore.Location = New System.Drawing.Point(53, 178)
+        Me.Credscore.Name = "Credscore"
+        Me.Credscore.Size = New System.Drawing.Size(100, 20)
+        Me.Credscore.TabIndex = 0
         '
         'TextBox2
         '
@@ -178,12 +179,12 @@ Partial Class Form1
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Can you receive a loan?"
         '
-        'TextBox9
+        'APR
         '
-        Me.TextBox9.Location = New System.Drawing.Point(574, 437)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 17
+        Me.APR.Location = New System.Drawing.Point(574, 437)
+        Me.APR.Name = "APR"
+        Me.APR.Size = New System.Drawing.Size(100, 20)
+        Me.APR.TabIndex = 17
         '
         'TextBox10
         '
@@ -260,11 +261,21 @@ Partial Class Form1
         Me.Debt.Size = New System.Drawing.Size(113, 20)
         Me.Debt.TabIndex = 7
         '
+        'APRbtn
+        '
+        Me.APRbtn.Location = New System.Drawing.Point(221, 223)
+        Me.APRbtn.Name = "APRbtn"
+        Me.APRbtn.Size = New System.Drawing.Size(75, 23)
+        Me.APRbtn.TabIndex = 26
+        Me.APRbtn.Text = "Button2"
+        Me.APRbtn.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 532)
+        Me.Controls.Add(Me.APRbtn)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label12)
@@ -273,7 +284,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.APR)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -290,7 +301,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Credscore)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -298,7 +309,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Credscore As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
@@ -314,7 +325,7 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents APR As TextBox
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Label10 As Label
@@ -324,4 +335,5 @@ Partial Class Form1
     Friend WithEvents Label9 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Debt As TextBox
+    Friend WithEvents APRbtn As Button
 End Class
