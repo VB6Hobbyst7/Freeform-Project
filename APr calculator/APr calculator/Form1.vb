@@ -1,11 +1,11 @@
 ﻿Public Class Form1
-    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles DebtIncome.TextChanged
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles Income.TextChanged, Debt.TextChanged
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If DebtIncome.Text <= 35 Then
+        If (Debt.Text / Income.Text) * 100 <= 35 Then
             MessageBox.Show("You are eligible for a Loan.")
-        ElseIf DebtIncome.Text > 35 Then
+        ElseIf (Debt.Text / Income.Text) * 100 > 35 Then
             MessageBox.Show("You are NOT eligible for a Loan.")
         End If
     End Sub

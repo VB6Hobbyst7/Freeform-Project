@@ -29,16 +29,15 @@ Partial Class Form1
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.DebtIncome = New System.Windows.Forms.TextBox()
+        Me.Income = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.carval = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
@@ -46,6 +45,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Debt = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -92,22 +94,22 @@ Partial Class Form1
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(53, 281)
+        Me.TextBox7.Location = New System.Drawing.Point(53, 274)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 6
         '
-        'DebtIncome
+        'Income
         '
-        Me.DebtIncome.Location = New System.Drawing.Point(303, 80)
-        Me.DebtIncome.Name = "DebtIncome"
-        Me.DebtIncome.Size = New System.Drawing.Size(113, 20)
-        Me.DebtIncome.TabIndex = 7
+        Me.Income.Location = New System.Drawing.Point(304, 128)
+        Me.Income.Name = "Income"
+        Me.Income.Size = New System.Drawing.Size(113, 20)
+        Me.Income.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(67, 162)
+        Me.Label1.Location = New System.Drawing.Point(70, 163)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 8
@@ -140,14 +142,14 @@ Partial Class Form1
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Label4"
         '
-        'Label5
+        'carval
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(81, 265)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Label5"
+        Me.carval.AutoSize = True
+        Me.carval.Location = New System.Drawing.Point(76, 211)
+        Me.carval.Name = "carval"
+        Me.carval.Size = New System.Drawing.Size(53, 13)
+        Me.carval.TabIndex = 12
+        Me.carval.Text = "Car Value"
         '
         'Label6
         '
@@ -175,15 +177,6 @@ Partial Class Form1
         Me.Label8.Size = New System.Drawing.Size(213, 24)
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Can you receive a loan?"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(314, 64)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(102, 13)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "Debt to income ratio"
         '
         'TextBox9
         '
@@ -217,7 +210,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(283, 106)
+        Me.Button1.Location = New System.Drawing.Point(283, 154)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(157, 30)
         Me.Button1.TabIndex = 21
@@ -242,11 +235,38 @@ Partial Class Form1
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Monthly Payment"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(342, 42)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(30, 13)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Debt"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(338, 103)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(44, 13)
+        Me.Label13.TabIndex = 25
+        Me.Label13.Text = "Monthly"
+        '
+        'Debt
+        '
+        Me.Debt.Location = New System.Drawing.Point(304, 68)
+        Me.Debt.Name = "Debt"
+        Me.Debt.Size = New System.Drawing.Size(113, 20)
+        Me.Debt.TabIndex = 7
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 532)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Button1)
@@ -254,16 +274,16 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.carval)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DebtIncome)
+        Me.Controls.Add(Me.Debt)
+        Me.Controls.Add(Me.Income)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
@@ -285,16 +305,15 @@ Partial Class Form1
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents DebtIncome As TextBox
+    Friend WithEvents Income As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents carval As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox11 As TextBox
@@ -302,4 +321,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Debt As TextBox
 End Class
