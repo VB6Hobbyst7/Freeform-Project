@@ -100,7 +100,7 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -119,16 +119,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\persona.png" />
+    <None Include="Resources\mario2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stick.jpg" />
+    <None Include="Resources\mario3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stick side.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stick down.jpg" />
+    <None Include="Resources\mario1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

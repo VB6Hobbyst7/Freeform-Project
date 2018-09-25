@@ -24,44 +24,25 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.movement = New System.Windows.Forms.Timer(Me.components)
-        Me.C3 = New System.Windows.Forms.PictureBox()
-        Me.C2 = New System.Windows.Forms.PictureBox()
+        Me.Animation = New System.Windows.Forms.Timer(Me.components)
         Me.C1 = New System.Windows.Forms.PictureBox()
-        CType(Me.C3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'movement
         '
-        Me.movement.Interval = 200
+        Me.movement.Interval = 10
         '
-        'C3
+        'Animation
         '
-        Me.C3.Image = Global.SpriteMovement.My.Resources.Resources.stick_down
-        Me.C3.Location = New System.Drawing.Point(185, 138)
-        Me.C3.Name = "C3"
-        Me.C3.Size = New System.Drawing.Size(183, 191)
-        Me.C3.TabIndex = 2
-        Me.C3.TabStop = False
-        Me.C3.Visible = False
-        '
-        'C2
-        '
-        Me.C2.Image = Global.SpriteMovement.My.Resources.Resources.stick_side
-        Me.C2.Location = New System.Drawing.Point(185, 138)
-        Me.C2.Name = "C2"
-        Me.C2.Size = New System.Drawing.Size(183, 191)
-        Me.C2.TabIndex = 1
-        Me.C2.TabStop = False
-        Me.C2.Visible = False
+        Me.Animation.Interval = 80
         '
         'C1
         '
-        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.stick
-        Me.C1.Location = New System.Drawing.Point(185, 138)
+        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.mario1
+        Me.C1.Location = New System.Drawing.Point(214, 126)
         Me.C1.Name = "C1"
-        Me.C1.Size = New System.Drawing.Size(183, 191)
+        Me.C1.Size = New System.Drawing.Size(116, 202)
         Me.C1.TabIndex = 0
         Me.C1.TabStop = False
         '
@@ -70,20 +51,16 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(816, 480)
-        Me.Controls.Add(Me.C3)
-        Me.Controls.Add(Me.C2)
         Me.Controls.Add(Me.C1)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.C3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TransparencyKey = System.Drawing.Color.White
         CType(Me.C1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents C1 As PictureBox
-    Friend WithEvents C2 As PictureBox
-    Friend WithEvents C3 As PictureBox
     Friend WithEvents movement As Timer
+    Friend WithEvents Animation As Timer
 End Class
