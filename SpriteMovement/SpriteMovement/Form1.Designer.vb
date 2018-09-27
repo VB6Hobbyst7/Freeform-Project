@@ -43,6 +43,7 @@ Partial Class Form1
         Me.C1.Location = New System.Drawing.Point(214, 126)
         Me.C1.Name = "C1"
         Me.C1.Size = New System.Drawing.Size(116, 202)
+        Me.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.C1.TabIndex = 0
         Me.C1.TabStop = False
         '
