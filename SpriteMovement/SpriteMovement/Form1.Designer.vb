@@ -39,10 +39,10 @@ Partial Class Form1
         '
         'C1
         '
-        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.mario1
+        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.Pokemon_right_1
         Me.C1.Location = New System.Drawing.Point(214, 126)
         Me.C1.Name = "C1"
-        Me.C1.Size = New System.Drawing.Size(116, 202)
+        Me.C1.Size = New System.Drawing.Size(57, 74)
         Me.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.C1.TabIndex = 0
         Me.C1.TabStop = False

@@ -47,19 +47,19 @@
 
     Private Sub movement_Tick(sender As Object, e As EventArgs) Handles movement.Tick
         If moveRight = True Then
-            C1.Left = C1.Left + 5
+            C1.Left = C1.Left + 4
         End If
 
         If moveLeft = True Then
-            C1.Left = C1.Left - 5
+            C1.Left = C1.Left - 4
         End If
 
         If moveUp = True Then
-            C1.Top = C1.Top - 5
+            C1.Top = C1.Top - 4
         End If
 
         If moveDown = True Then
-            C1.Top = C1.Top + 5
+            C1.Top = C1.Top + 4
         End If
     End Sub
 
@@ -70,12 +70,14 @@
     Sub AnimationChar()
         Anichar -= 1
         Select Case Anichar
+            Case 4
+                C1.Image = My.Resources.Pokemon_right_1
             Case 3
-                C1.Image = My.Resources.mario1
+                C1.Image = My.Resources.Pokemon_right_2
             Case 2
-                C1.Image = My.Resources.mario2
+                C1.Image = My.Resources.Pokemon_right_3
             Case 1
-                C1.Image = My.Resources.mario3
+                C1.Image = My.Resources.Pokemon_right_4
         End Select
     End Sub
 
