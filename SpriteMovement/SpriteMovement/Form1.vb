@@ -7,6 +7,10 @@
     Public Anichar_Up As Integer = 4
     Public Anichar_Down As Integer = 4
     Public Anichar_Left As Integer = 4
+    Public Shoot As Integer
+    Public Shoot2 As Integer
+    Public BulletarrayRight() As PictureBox
+    Public BulletNumberRight As Integer = -1
 
 #Region "Movement & Animation"
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -23,6 +27,8 @@
             Case Keys.Down
                 moveDown = True
                 Animation_Down.Enabled = True
+            Case Keys.Space
+                Shootright()
         End Select
     End Sub
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
@@ -65,10 +71,6 @@
         If moveDown = True Then
             C1.Top = C1.Top + 3
         End If
-        'If Collision(C1, Object1) = True Then
-        'C1.Top = 0
-        'C1.Left = 0
-        'End If
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -77,6 +79,7 @@
         Animation_Up.Enabled = False
         Animation_Down.Enabled = False
         Animation_Left.Enabled = False
+        bullet_movement.Enabled = False
     End Sub
     Sub AnimationChar_right()
         Anichar_Right -= 1
@@ -167,20 +170,50 @@
         End Select
     End Sub
 #End Region
-    'Private Function Collision(ByVal C1 As Object, ByVal Object1 As Object) As Boolean
-    '    Dim Collided As Boolean = False
-    '    If C1.Top + C1.Height >= Object1.Top And
-    '        Object1.Top + Object1.height >= C1.Top And
-    '        C1.Left + C1.Width >= Object1.Left And
-    '        Object1.Left + Object1.Width >= C1.Left Then
-    '        Collided = True
-    '    End If
-    '    Return Collided
-    'End Function
 
-    Private Sub left_Tick(sender As Object, e As EventArgs) Handles left_bounds.Tick
-        If C1.Bounds.IntersectsWith(Object1.Bounds) Then
+    Private Sub Right_bounds_Tick(sender As Object, e As EventArgs) Handles Right_bounds.Tick
+        If C1.Bounds.IntersectsWith(Right_boundary.Bounds) Then
             C1.Left = C1.Left - 3
         End If
+        Shoot = C1.Top + 10
+        Shoot2 = C1.Left + 50
+    End Sub
+    Private Sub Left_bounds_Tick(sender As Object, e As EventArgs) Handles Left_bounds.Tick
+        If C1.Bounds.IntersectsWith(Left_boundary.Bounds) Then
+            C1.Left = C1.Left + 3
+        End If
+    End Sub
+    Private Sub Top_bounds_Tick(sender As Object, e As EventArgs) Handles Top_bounds.Tick
+        If C1.Bounds.IntersectsWith(Top_boundary.Bounds) Then
+            C1.Top = C1.Top + 3
+        End If
+    End Sub
+
+    Private Sub Bottom_bounds_Tick(sender As Object, e As EventArgs) Handles Bottom_bounds.Tick
+        If C1.Bounds.IntersectsWith(Bottom_boundary.Bounds) Then
+            C1.Top = C1.Top - 3
+        End If
+    End Sub
+    Sub Shootright()
+        Dim Shoot_right As New PictureBox
+        Shoot_right.Top = Shoot
+        Shoot_Right.Left = Shoot2
+        Shoot_Right.Size = New Size(10, 10)
+        Shoot_Right.BackColor = Color.Blue
+        Controls.Add(Shoot_Right)
+        bullet_movement.Start()
+        BulletNumberRight += 1
+        ReDim Preserve BulletarrayRight(BulletNumberRight)
+        BulletarrayRight(BulletNumberRight) = Shoot_right
+    End Sub
+
+    Private Sub bullet_movement_Tick(sender As Object, e As EventArgs) Handles bullet_movement.Tick
+        Dim I As Integer
+        For I = 0 To BulletNumberRight
+            BulletarrayRight(I).Left += 10
+            If BulletarrayRight(I).Bounds.IntersectsWith(Right_boundary.Bounds) Then
+                Me.Controls.Remove(BulletarrayRight(I))
+            End If
+        Next
     End Sub
 End Class

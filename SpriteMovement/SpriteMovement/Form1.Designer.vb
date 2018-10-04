@@ -29,13 +29,20 @@ Partial Class Form1
         Me.Animation_Down = New System.Windows.Forms.Timer(Me.components)
         Me.Animation_Left = New System.Windows.Forms.Timer(Me.components)
         Me.C1 = New System.Windows.Forms.PictureBox()
-        Me.Object1 = New System.Windows.Forms.PictureBox()
-        Me.left_bounds = New System.Windows.Forms.Timer(Me.components)
-        Me.right_bounds = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Right_boundary = New System.Windows.Forms.PictureBox()
+        Me.Right_bounds = New System.Windows.Forms.Timer(Me.components)
+        Me.Left_bounds = New System.Windows.Forms.Timer(Me.components)
+        Me.Left_boundary = New System.Windows.Forms.PictureBox()
+        Me.Top_bounds = New System.Windows.Forms.Timer(Me.components)
+        Me.Bottom_bounds = New System.Windows.Forms.Timer(Me.components)
+        Me.Top_boundary = New System.Windows.Forms.PictureBox()
+        Me.Bottom_boundary = New System.Windows.Forms.PictureBox()
+        Me.bullet_movement = New System.Windows.Forms.Timer(Me.components)
         CType(Me.C1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Object1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Right_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'movement
@@ -60,7 +67,8 @@ Partial Class Form1
         '
         'C1
         '
-        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.Pokemon_right_1
+        Me.C1.BackColor = System.Drawing.Color.Transparent
+        Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.Pokemon_Down_1
         Me.C1.Location = New System.Drawing.Point(214, 126)
         Me.C1.Name = "C1"
         Me.C1.Size = New System.Drawing.Size(29, 38)
@@ -68,48 +76,88 @@ Partial Class Form1
         Me.C1.TabIndex = 0
         Me.C1.TabStop = False
         '
-        'Object1
+        'Right_boundary
         '
-        Me.Object1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Object1.Location = New System.Drawing.Point(814, -2)
-        Me.Object1.Name = "Object1"
-        Me.Object1.Size = New System.Drawing.Size(10, 489)
-        Me.Object1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Object1.TabIndex = 1
-        Me.Object1.TabStop = False
+        Me.Right_boundary.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Right_boundary.Location = New System.Drawing.Point(814, -105)
+        Me.Right_boundary.Name = "Right_boundary"
+        Me.Right_boundary.Size = New System.Drawing.Size(10, 1039)
+        Me.Right_boundary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Right_boundary.TabIndex = 1
+        Me.Right_boundary.TabStop = False
         '
-        'left_bounds
+        'Right_bounds
         '
-        Me.left_bounds.Enabled = True
-        Me.left_bounds.Interval = 1
+        Me.Right_bounds.Enabled = True
+        Me.Right_bounds.Interval = 1
         '
-        'right_bounds
+        'Left_bounds
         '
-        Me.right_bounds.Enabled = True
-        Me.right_bounds.Interval = 1
+        Me.Left_bounds.Enabled = True
+        Me.Left_bounds.Interval = 1
         '
-        'PictureBox1
+        'Left_boundary
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(-9, -2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(10, 489)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.Left_boundary.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Left_boundary.Location = New System.Drawing.Point(-9, -2)
+        Me.Left_boundary.Name = "Left_boundary"
+        Me.Left_boundary.Size = New System.Drawing.Size(10, 489)
+        Me.Left_boundary.TabIndex = 2
+        Me.Left_boundary.TabStop = False
+        '
+        'Top_bounds
+        '
+        Me.Top_bounds.Enabled = True
+        Me.Top_bounds.Interval = 1
+        '
+        'Bottom_bounds
+        '
+        Me.Bottom_bounds.Enabled = True
+        Me.Bottom_bounds.Interval = 1
+        '
+        'Top_boundary
+        '
+        Me.Top_boundary.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Top_boundary.Location = New System.Drawing.Point(-6, -9)
+        Me.Top_boundary.Name = "Top_boundary"
+        Me.Top_boundary.Size = New System.Drawing.Size(830, 10)
+        Me.Top_boundary.TabIndex = 3
+        Me.Top_boundary.TabStop = False
+        '
+        'Bottom_boundary
+        '
+        Me.Bottom_boundary.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Bottom_boundary.Location = New System.Drawing.Point(-6, 478)
+        Me.Bottom_boundary.Name = "Bottom_boundary"
+        Me.Bottom_boundary.Size = New System.Drawing.Size(830, 10)
+        Me.Bottom_boundary.TabIndex = 4
+        Me.Bottom_boundary.TabStop = False
+        '
+        'bullet_movement
+        '
+        Me.bullet_movement.Enabled = True
+        Me.bullet_movement.Interval = 1
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(816, 480)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Object1)
+        Me.Controls.Add(Me.Bottom_boundary)
+        Me.Controls.Add(Me.Top_boundary)
+        Me.Controls.Add(Me.Left_boundary)
+        Me.Controls.Add(Me.Right_boundary)
         Me.Controls.Add(Me.C1)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.White
         CType(Me.C1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Object1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Right_boundary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -120,8 +168,13 @@ Partial Class Form1
     Friend WithEvents Animation_Up As Timer
     Friend WithEvents Animation_Down As Timer
     Friend WithEvents Animation_Left As Timer
-    Friend WithEvents Object1 As PictureBox
-    Friend WithEvents left_bounds As Timer
-    Friend WithEvents right_bounds As Timer
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Right_boundary As PictureBox
+    Friend WithEvents Right_bounds As Timer
+    Friend WithEvents Left_bounds As Timer
+    Friend WithEvents Left_boundary As PictureBox
+    Friend WithEvents Top_bounds As Timer
+    Friend WithEvents Bottom_bounds As Timer
+    Friend WithEvents Top_boundary As PictureBox
+    Friend WithEvents Bottom_boundary As PictureBox
+    Friend WithEvents bullet_movement As Timer
 End Class
