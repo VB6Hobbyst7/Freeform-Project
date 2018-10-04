@@ -139,4 +139,40 @@
   <data name="Pokemon_right_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pokemon right 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pokemon_Down_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Down 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Down_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Down 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Down_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Down 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Down_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Down 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Left_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Left 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Left_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Left 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Left_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Left 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Left_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Left 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Up_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Up 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Up_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Up 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Up_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Up 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pokemon_Up_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pokemon Up 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -139,6 +139,42 @@
   <ItemGroup>
     <None Include="Resources\Pokemon right 1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Up 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Up 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Up 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Up 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Down 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Down 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Down 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Down 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Left 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Left 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Left 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pokemon Left 4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
