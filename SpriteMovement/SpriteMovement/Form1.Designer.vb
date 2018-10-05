@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Top_boundary = New System.Windows.Forms.PictureBox()
         Me.Bottom_boundary = New System.Windows.Forms.PictureBox()
         Me.bullet_movement = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.C1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Right_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,6 +121,9 @@ Partial Class Form1
         Me.bullet_movement.Enabled = True
         Me.bullet_movement.Interval = 1
         '
+        'Timer1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,4 +160,5 @@ Partial Class Form1
     Friend WithEvents Top_boundary As PictureBox
     Friend WithEvents Bottom_boundary As PictureBox
     Friend WithEvents bullet_movement As Timer
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -9,8 +9,12 @@
     Public Anichar_Left As Integer = 4
     Public BulletarrayRight() As PictureBox
     Public BulletNumberRight As Integer = -1
-    Public BulletarrayLeft() As PictureBox
+    Public Bullet_arrayLeft() As PictureBox
     Public BulletNumberLeft As Integer = -1
+    Public Bullet_arrayUp() As PictureBox
+    Public BulletNumberUp As Integer = -1
+    Public Bullet_arrayDown() As PictureBox
+    Public BulletNumberDown As Integer = -1
     Public PokRight As Image = My.Resources.Pokemon_right_1
     Public PokRight2 As Image = My.Resources.Pokemon_right_2
     Public PokRight3 As Image = My.Resources.Pokemon_right_3
@@ -19,6 +23,14 @@
     Public PokLeft2 As Image = My.Resources.Pokemon_Left_2
     Public PokLeft3 As Image = My.Resources.Pokemon_Left_3
     Public PokLeft4 As Image = My.Resources.Pokemon_Left_4
+    Public PokDown As Image = My.Resources.Pokemon_Down_1
+    Public PokDown2 As Image = My.Resources.Pokemon_Down_2
+    Public PokDown3 As Image = My.Resources.Pokemon_Down_3
+    Public PokDown4 As Image = My.Resources.Pokemon_Down_4
+    Public PokUp As Image = My.Resources.Pokemon_Up_1
+    Public PokUp2 As Image = My.Resources.Pokemon_Up_2
+    Public PokUp3 As Image = My.Resources.Pokemon_Up_3
+    Public PokUp4 As Image = My.Resources.Pokemon_Up_4
 
 #Region "Movement & Animation"
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -43,6 +55,12 @@
                 If C1.Image Is PokLeft Or C1.Image Is PokLeft2 Or C1.Image Is PokLeft3 Or C1.Image Is PokLeft4 Then
                     Shootleft()
                 End If
+                If C1.Image Is PokDown Or C1.Image Is PokDown2 Or C1.Image Is PokDown3 Or C1.Image Is PokDown4 Then
+                    Shootdown()
+                End If
+                If C1.Image Is PokUp Or C1.Image Is PokUp2 Or C1.Image Is PokUp3 Or C1.Image Is PokUp4 Then
+                    Shootup()
+                End If
         End Select
     End Sub
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
@@ -54,7 +72,7 @@
             Case Keys.Up
                 moveUp = False
                 Animation_Up.Enabled = False
-                C1.Image = My.Resources.Pokemon_Up_1
+                C1.Image = PokUp
             Case Keys.Left
                 moveLeft = False
                 Animation_Left.Enabled = False
@@ -62,7 +80,7 @@
             Case Keys.Down
                 moveDown = False
                 Animation_Down.Enabled = False
-                C1.Image = My.Resources.Pokemon_Down_1
+                C1.Image = PokDown
         End Select
     End Sub
     Private Sub C1_Click(sender As Object, e As EventArgs) Handles C1.Click
@@ -132,13 +150,13 @@
         Anichar_Up -= 1
         Select Case Anichar_Up
             Case 4
-                C1.Image = My.Resources.Pokemon_Up_1
+                C1.Image = PokUp
             Case 3
-                C1.Image = My.Resources.Pokemon_Up_2
+                C1.Image = PokUp2
             Case 2
-                C1.Image = My.Resources.Pokemon_Up_3
+                C1.Image = PokUp3
             Case 1
-                C1.Image = My.Resources.Pokemon_Up_4
+                C1.Image = PokUp4
         End Select
     End Sub
 
@@ -154,13 +172,13 @@
         Anichar_Down -= 1
         Select Case Anichar_Down
             Case 4
-                C1.Image = My.Resources.Pokemon_Down_1
+                C1.Image = PokDown
             Case 3
-                C1.Image = My.Resources.Pokemon_Down_2
+                C1.Image = PokDown2
             Case 2
-                C1.Image = My.Resources.Pokemon_Down_3
+                C1.Image = PokDown3
             Case 1
-                C1.Image = My.Resources.Pokemon_Down_4
+                C1.Image = PokDown4
         End Select
     End Sub
 
@@ -206,11 +224,11 @@
     End Sub
     Sub Shootright()
         Dim Shoot_right As New PictureBox
-        Shoot_right.Top = C1.Top + 10
-        Shoot_right.Left = C1.Left + 50
+        Shoot_right.Top = C1.Top + 15
+        Shoot_right.Left = C1.Left + 15
         Shoot_right.Size = New Size(10, 10)
-        Shoot_Right.BackColor = Color.Blue
-        Controls.Add(Shoot_Right)
+        Shoot_right.BackColor = Color.Blue
+        Controls.Add(Shoot_right)
         bullet_movement.Start()
         BulletNumberRight += 1
         ReDim Preserve BulletarrayRight(BulletNumberRight)
@@ -218,30 +236,67 @@
     End Sub
     Sub Shootleft()
         Dim Shoot_Left As New PictureBox
-        Shoot_Left.Top = C1.Top - 10
-        Shoot_Left.Left = C1.Left - 50
+        Shoot_Left.Top = C1.Top + 15
+        Shoot_Left.Left = C1.Left - 15
         Shoot_Left.Size = New Size(10, 10)
         Shoot_Left.BackColor = Color.Blue
         Controls.Add(Shoot_Left)
         bullet_movement.Start()
-        BulletNumberLeft += 10
-        ReDim Preserve BulletarrayLeft(BulletNumberLeft)
-        BulletarrayLeft(BulletNumberLeft) = Shoot_Left
+        BulletNumberLeft += 1
+        ReDim Preserve Bullet_arrayLeft(BulletNumberLeft)
+        Bullet_arrayLeft(BulletNumberLeft) = Shoot_Left
     End Sub
-
+    Sub Shootdown()
+        Dim Shoot_Down As New PictureBox
+        Shoot_Down.Top = C1.Top + 15
+        Shoot_Down.Left = C1.Left + 10
+        Shoot_Down.Size = New Size(10, 10)
+        Shoot_Down.BackColor = Color.Blue
+        Controls.Add(Shoot_Down)
+        bullet_movement.Start()
+        BulletNumberDown += 1
+        ReDim Preserve Bullet_arrayDown(BulletNumberDown)
+        Bullet_arrayDown(BulletNumberDown) = Shoot_Down
+    End Sub
+    Sub Shootup()
+        Dim Shoot_Up As New PictureBox
+        Shoot_Up.Top = C1.Top + 15
+        Shoot_Up.Left = C1.Left + 10
+        Shoot_Up.Size = New Size(10, 10)
+        Shoot_Up.BackColor = Color.Blue
+        Controls.Add(Shoot_Up)
+        bullet_movement.Start()
+        BulletNumberUp += 1
+        ReDim Preserve Bullet_arrayUp(BulletNumberUp)
+        Bullet_arrayUp(BulletNumberUp) = Shoot_Up
+    End Sub
     Private Sub bullet_movement_Tick(sender As Object, e As EventArgs) Handles bullet_movement.Tick
         Dim A As Integer
-        Dim B As Integer
         For A = 0 To BulletNumberRight
             BulletarrayRight(A).Left += 10
             If BulletarrayRight(A).Bounds.IntersectsWith(Right_boundary.Bounds) Then
                 Me.Controls.Remove(BulletarrayRight(A))
             End If
         Next
+        Dim B As Integer
         For B = 0 To BulletNumberLeft
-            BulletarrayLeft(B).Left -= 10
-            If BulletarrayLeft(B).Bounds.IntersectsWith(Left_boundary.Bounds) Then
-                Me.Controls.Remove(BulletarrayLeft(B))
+            Bullet_arrayLeft(B).Left -= 10
+            If Bullet_arrayLeft(B).Bounds.IntersectsWith(Left_boundary.Bounds) Then
+                Me.Controls.Remove(Bullet_arrayLeft(B))
+            End If
+        Next
+        Dim C As Integer
+        For C = 0 To BulletNumberDown
+            Bullet_arrayDown(C).Top += 10
+            If Bullet_arrayDown(C).Bounds.IntersectsWith(Bottom_boundary.Bounds) Then
+                Me.Controls.Remove(Bullet_arrayDown(C))
+            End If
+        Next
+        Dim D As Integer
+        For D = 0 To BulletNumberUp
+            Bullet_arrayUp(D).Top -= 10
+            If Bullet_arrayUp(D).Bounds.IntersectsWith(Top_boundary.Bounds) Then
+                Me.Controls.Remove(Bullet_arrayUp(D))
             End If
         Next
     End Sub
