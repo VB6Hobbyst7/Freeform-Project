@@ -30,11 +30,8 @@ Partial Class Form1
         Me.Animation_Left = New System.Windows.Forms.Timer(Me.components)
         Me.C1 = New System.Windows.Forms.PictureBox()
         Me.Right_boundary = New System.Windows.Forms.PictureBox()
-        Me.Right_bounds = New System.Windows.Forms.Timer(Me.components)
-        Me.Left_bounds = New System.Windows.Forms.Timer(Me.components)
+        Me.Bounds = New System.Windows.Forms.Timer(Me.components)
         Me.Left_boundary = New System.Windows.Forms.PictureBox()
-        Me.Top_bounds = New System.Windows.Forms.Timer(Me.components)
-        Me.Bottom_bounds = New System.Windows.Forms.Timer(Me.components)
         Me.Top_boundary = New System.Windows.Forms.PictureBox()
         Me.Bottom_boundary = New System.Windows.Forms.PictureBox()
         Me.bullet_movement = New System.Windows.Forms.Timer(Me.components)
@@ -86,15 +83,10 @@ Partial Class Form1
         Me.Right_boundary.TabIndex = 1
         Me.Right_boundary.TabStop = False
         '
-        'Right_bounds
+        'Bounds
         '
-        Me.Right_bounds.Enabled = True
-        Me.Right_bounds.Interval = 1
-        '
-        'Left_bounds
-        '
-        Me.Left_bounds.Enabled = True
-        Me.Left_bounds.Interval = 1
+        Me.Bounds.Enabled = True
+        Me.Bounds.Interval = 1
         '
         'Left_boundary
         '
@@ -104,16 +96,6 @@ Partial Class Form1
         Me.Left_boundary.Size = New System.Drawing.Size(10, 489)
         Me.Left_boundary.TabIndex = 2
         Me.Left_boundary.TabStop = False
-        '
-        'Top_bounds
-        '
-        Me.Top_bounds.Enabled = True
-        Me.Top_bounds.Interval = 1
-        '
-        'Bottom_bounds
-        '
-        Me.Bottom_bounds.Enabled = True
-        Me.Bottom_bounds.Interval = 1
         '
         'Top_boundary
         '
@@ -169,11 +151,8 @@ Partial Class Form1
     Friend WithEvents Animation_Down As Timer
     Friend WithEvents Animation_Left As Timer
     Friend WithEvents Right_boundary As PictureBox
-    Friend WithEvents Right_bounds As Timer
-    Friend WithEvents Left_bounds As Timer
+    Friend WithEvents Bounds As Timer
     Friend WithEvents Left_boundary As PictureBox
-    Friend WithEvents Top_bounds As Timer
-    Friend WithEvents Bottom_bounds As Timer
     Friend WithEvents Top_boundary As PictureBox
     Friend WithEvents Bottom_boundary As PictureBox
     Friend WithEvents bullet_movement As Timer
