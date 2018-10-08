@@ -61,6 +61,8 @@
                 If C1.Image Is PokUp Or C1.Image Is PokUp2 Or C1.Image Is PokUp3 Or C1.Image Is PokUp4 Then
                     Shootup()
                 End If
+                'e.SuppressKeyPress = True
+
         End Select
     End Sub
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
@@ -81,6 +83,8 @@
                 moveDown = False
                 Animation_Down.Enabled = False
                 C1.Image = PokDown
+                'Case Keys.Space
+                'e.SuppressKeyPress = False
         End Select
     End Sub
     Private Sub C1_Click(sender As Object, e As EventArgs) Handles C1.Click
@@ -106,6 +110,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        C1.Image = PokDown
         movement.Start()
         Animation_Right.Enabled = False
         Animation_Up.Enabled = False
@@ -299,5 +304,8 @@
                 Me.Controls.Remove(Bullet_arrayUp(D))
             End If
         Next
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
     End Sub
 End Class
