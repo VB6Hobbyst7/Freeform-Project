@@ -30,13 +30,14 @@ Partial Class Form1
         Me.Animation_Left = New System.Windows.Forms.Timer(Me.components)
         Me.Bounds = New System.Windows.Forms.Timer(Me.components)
         Me.bullet_movement = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Spawn = New System.Windows.Forms.Timer(Me.components)
         Me.Test = New System.Windows.Forms.PictureBox()
         Me.Bottom_boundary = New System.Windows.Forms.PictureBox()
         Me.Top_boundary = New System.Windows.Forms.PictureBox()
         Me.Left_boundary = New System.Windows.Forms.PictureBox()
         Me.Right_boundary = New System.Windows.Forms.PictureBox()
         Me.C1 = New System.Windows.Forms.PictureBox()
+        Me.CreateEnemy = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Test, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,13 +76,14 @@ Partial Class Form1
         Me.bullet_movement.Enabled = True
         Me.bullet_movement.Interval = 1
         '
-        'Timer1
+        'Spawn
         '
+        Me.Spawn.Interval = 1000
         '
         'Test
         '
         Me.Test.Image = Global.SpriteMovement.My.Resources.Resources.mario1
-        Me.Test.Location = New System.Drawing.Point(726, 402)
+        Me.Test.Location = New System.Drawing.Point(725, 199)
         Me.Test.Name = "Test"
         Me.Test.Size = New System.Drawing.Size(36, 50)
         Me.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -128,12 +130,16 @@ Partial Class Form1
         '
         Me.C1.BackColor = System.Drawing.Color.Transparent
         Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.Pokemon_Down_1
-        Me.C1.Location = New System.Drawing.Point(214, 126)
+        Me.C1.Location = New System.Drawing.Point(386, 199)
         Me.C1.Name = "C1"
         Me.C1.Size = New System.Drawing.Size(29, 38)
         Me.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.C1.TabIndex = 0
         Me.C1.TabStop = False
+        '
+        'CreateEnemy
+        '
+        Me.CreateEnemy.Interval = 1
         '
         'Form1
         '
@@ -174,6 +180,7 @@ Partial Class Form1
     Friend WithEvents Top_boundary As PictureBox
     Friend WithEvents Bottom_boundary As PictureBox
     Friend WithEvents bullet_movement As Timer
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Spawn As Timer
     Friend WithEvents Test As PictureBox
+    Friend WithEvents CreateEnemy As Timer
 End Class

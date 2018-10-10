@@ -31,6 +31,21 @@
     Public PokUp2 As Image = My.Resources.Pokemon_Up_2
     Public PokUp3 As Image = My.Resources.Pokemon_Up_3
     Public PokUp4 As Image = My.Resources.Pokemon_Up_4
+    Public enemycount As Integer = -1
+    Public Enemyarray() As PictureBox
+    Public F As Integer
+    Public Shoot_Left As New PictureBox
+    Public Enemy1 As New PictureBox
+
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        DoubleBuffered = True
+    End Sub
 
 #Region "Movement & Animation"
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -117,7 +132,7 @@
         Animation_Down.Enabled = False
         Animation_Left.Enabled = False
         bullet_movement.Enabled = False
-
+        Spawn.Start()
 
     End Sub
     Sub AnimationChar_right()
@@ -227,6 +242,7 @@
             C1.Top = C1.Top - 3
         End If
     End Sub
+#Region "Shooting"
     Sub Shootright()
         Dim Shoot_right As New PictureBox
         Shoot_right.Top = C1.Top + 15
@@ -282,12 +298,22 @@
             If BulletarrayRight(A).Bounds.IntersectsWith(Right_boundary.Bounds) Then
                 Me.Controls.Remove(BulletarrayRight(A))
             End If
+            If BulletarrayRight(A).Bounds.IntersectsWith(Test.Bounds) Then
+                Me.Controls.Remove(BulletarrayRight(BulletNumberRight))
+                Me.Controls.Remove(Test)
+            End If
         Next
         Dim B As Integer
         For B = 0 To BulletNumberLeft
             Bullet_arrayLeft(B).Left -= 10
             If Bullet_arrayLeft(B).Bounds.IntersectsWith(Left_boundary.Bounds) Then
                 Me.Controls.Remove(Bullet_arrayLeft(B))
+            End If
+            If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemyarray(enemycount).Bounds) Then
+                'MessageBox.Show("hi")
+                Me.Controls.Remove(Bullet_arrayLeft(B))
+                Me.Controls.Remove(Enemyarray(enemycount - enemycount))
+
             End If
         Next
         Dim C As Integer
@@ -305,7 +331,35 @@
             End If
         Next
     End Sub
+#End Region
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
+        Dim Number As Integer
+        Number = 1
+        ' Number = Int((1 - 2 * -1) * Rnd())
+        If Number = 1 Then
+            Pos1()
+        End If
+    End Sub
+    Sub Pos1()
+        Dim Enemy1 As New PictureBox
+        Enemy1.Top = +15
+        Enemy1.Left = +30
+        Enemy1.Size = New Size(36, 50)
+        Enemy1.Image = My.Resources.mario1
+        Enemy1.SizeMode = PictureBoxSizeMode.StretchImage
+        Controls.Add(Enemy1)
+        CreateEnemy.Start()
+        enemycount += 1
+        ReDim Preserve Enemyarray(enemycount)
+        Enemyarray(enemycount) = Enemy1
+    End Sub
+
+    Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
+        For F = 0 To enemycount
+            Enemyarray(F).Left += 1
+
+        Next
+
     End Sub
 End Class
