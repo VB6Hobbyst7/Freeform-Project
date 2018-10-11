@@ -309,11 +309,14 @@
             If Bullet_arrayLeft(B).Bounds.IntersectsWith(Left_boundary.Bounds) Then
                 Me.Controls.Remove(Bullet_arrayLeft(B))
             End If
-            If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemyarray(enemycount).Bounds) Then
-                'MessageBox.Show("hi")
-                Me.Controls.Remove(Bullet_arrayLeft(B))
-                Me.Controls.Remove(Enemyarray(enemycount - enemycount))
+            If enemycount >= 1 Then
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemyarray(enemycount).Bounds) Then
+                    'MessageBox.Show("hi")
 
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Me.Controls.Remove(Enemyarray(enemycount))
+                    enemycount = enemycount - 1
+                End If
             End If
         Next
         Dim C As Integer
