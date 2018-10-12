@@ -33,9 +33,16 @@
     Public PokUp4 As Image = My.Resources.Pokemon_Up_4
     Public enemycount As Integer = -1
     Public Enemyarray() As PictureBox
-    Public F As Integer
-    Public Shoot_Left As New PictureBox
-    Public Enemy1 As New PictureBox
+    Public enemycount2 As Integer = -1
+    Public Enemyarray2() As PictureBox
+    Public enemycount3 As Integer = -1
+    Public Enemyarray3() As PictureBox
+    Public enemycount4 As Integer = -1
+    Public Enemyarray4() As PictureBox
+    Public enemycount5 As Integer = -1
+    Public Enemyarray5() As PictureBox
+    Public enemycount6 As Integer = -1
+    Public Enemyarray6() As PictureBox
 
 
     Public Sub New()
@@ -309,10 +316,10 @@
             If Bullet_arrayLeft(B).Bounds.IntersectsWith(Left_boundary.Bounds) Then
                 Me.Controls.Remove(Bullet_arrayLeft(B))
             End If
-            If enemycount >= 1 Then
+            If enemycount >= 0 Then
                 If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemyarray(enemycount).Bounds) Then
-                    'MessageBox.Show("hi")
 
+                    'MessageBox.Show("hi")
                     Me.Controls.Remove(Bullet_arrayLeft(B))
                     Me.Controls.Remove(Enemyarray(enemycount))
                     enemycount = enemycount - 1
@@ -339,9 +346,15 @@
     Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
         Dim Number As Integer
         Number = 1
-        ' Number = Int((1 - 2 * -1) * Rnd())
+        'Number = Int((1 - 4 * -1) * Rnd())
         If Number = 1 Then
             Pos1()
+        ElseIf Number = 2 Then
+            Pos2()
+        ElseIf Number = 3 Then
+            Pos3()
+        ElseIf Number = 4 Then
+            Pos4()
         End If
     End Sub
     Sub Pos1()
@@ -357,11 +370,62 @@
         ReDim Preserve Enemyarray(enemycount)
         Enemyarray(enemycount) = Enemy1
     End Sub
-
+    Sub Pos2()
+        Dim Enemy2 As New PictureBox
+        Enemy2.Top = +200
+        Enemy2.Left = +30
+        Enemy2.Size = New Size(36, 50)
+        Enemy2.Image = My.Resources.mario1
+        Enemy2.BackColor = Color.Transparent
+        Enemy2.SizeMode = PictureBoxSizeMode.StretchImage
+        Controls.Add(Enemy2)
+        CreateEnemy.Start()
+        enemycount2 += 1
+        ReDim Preserve Enemyarray2(enemycount2)
+        Enemyarray2(enemycount2) = Enemy2
+    End Sub
+    Sub Pos3()
+        Dim Enemy3 As New PictureBox
+        Enemy3.Top = +400
+        Enemy3.Left = +30
+        Enemy3.Size = New Size(36, 50)
+        Enemy3.Image = My.Resources.mario1
+        Enemy3.SizeMode = PictureBoxSizeMode.StretchImage
+        Controls.Add(Enemy3)
+        CreateEnemy.Start()
+        enemycount3 += 1
+        ReDim Preserve Enemyarray3(enemycount3)
+        Enemyarray3(enemycount3) = Enemy3
+    End Sub
+    Sub Pos4()
+        Dim Enemy4 As New PictureBox
+        Enemy4.Top = +400
+        Enemy4.Left = +50
+        Enemy4.Size = New Size(36, 50)
+        Enemy4.Image = My.Resources.mario1
+        Enemy4.SizeMode = PictureBoxSizeMode.StretchImage
+        Controls.Add(Enemy4)
+        CreateEnemy.Start()
+        enemycount4 += 1
+        ReDim Preserve Enemyarray4(enemycount4)
+        Enemyarray4(enemycount4) = Enemy4
+    End Sub
     Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
+        Dim F As Integer
         For F = 0 To enemycount
             Enemyarray(F).Left += 1
 
+        Next
+        Dim G As Integer
+        For G = 0 To enemycount2
+            Enemyarray2(G).Left += 1
+        Next
+        Dim H As Integer
+        For H = 0 To enemycount3
+            Enemyarray3(H).Left += 1
+        Next
+        For I = 0 To enemycount4
+            Enemyarray4(I).Top -= 1
         Next
 
     End Sub

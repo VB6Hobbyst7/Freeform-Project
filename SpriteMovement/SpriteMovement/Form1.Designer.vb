@@ -78,10 +78,11 @@ Partial Class Form1
         '
         'Spawn
         '
-        Me.Spawn.Interval = 1000
+        Me.Spawn.Interval = 2000
         '
         'Test
         '
+        Me.Test.BackColor = System.Drawing.Color.Transparent
         Me.Test.Image = Global.SpriteMovement.My.Resources.Resources.mario1
         Me.Test.Location = New System.Drawing.Point(725, 199)
         Me.Test.Name = "Test"
