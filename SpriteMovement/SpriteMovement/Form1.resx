@@ -139,9 +139,12 @@
     <value>833, 16</value>
   </metadata>
   <metadata name="Spawn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>744, 16</value>
+    <value>744, 20</value>
   </metadata>
   <metadata name="CreateEnemy.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>979, 16</value>
+  </metadata>
+  <metadata name="Enemy1234.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1115, 16</value>
   </metadata>
 </root>

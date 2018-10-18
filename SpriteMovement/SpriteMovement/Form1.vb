@@ -32,7 +32,7 @@
     Public PokUp3 As Image = My.Resources.Pokemon_Up_3
     Public PokUp4 As Image = My.Resources.Pokemon_Up_4
     Public enemycount As Integer = -1
-    Public Enemyarray() As PictureBox
+    Public Enemyarray(20) As PictureBox
     Public enemycount2 As Integer = -1
     Public Enemyarray2() As PictureBox
     Public enemycount3 As Integer = -1
@@ -43,6 +43,16 @@
     Public Enemyarray5() As PictureBox
     Public enemycount6 As Integer = -1
     Public Enemyarray6() As PictureBox
+    Public Enemy As New PictureBox
+    Public Enemy01 As New PictureBox
+    Public Enemy02 As New PictureBox
+
+
+
+
+
+
+
 
 
     Public Sub New()
@@ -132,6 +142,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         C1.Image = PokDown
         movement.Start()
         Animation_Right.Enabled = False
@@ -140,7 +151,14 @@
         Animation_Left.Enabled = False
         bullet_movement.Enabled = False
         Spawn.Start()
+        Array()
 
+    End Sub
+    Sub Array()
+        Enemyarray(0) = Enemy
+        Enemyarray(1) = Enemy
+        Enemyarray(2) = Enemy
+        Enemyarray(3) = Enemy
     End Sub
     Sub AnimationChar_right()
         Anichar_Right -= 1
@@ -299,6 +317,7 @@
         Bullet_arrayUp(BulletNumberUp) = Shoot_Up
     End Sub
     Private Sub bullet_movement_Tick(sender As Object, e As EventArgs) Handles bullet_movement.Tick
+
         Dim A As Integer
         For A = 0 To BulletNumberRight
             BulletarrayRight(A).Left += 10
@@ -321,7 +340,7 @@
 
                     'MessageBox.Show("hi")
                     Me.Controls.Remove(Bullet_arrayLeft(B))
-                    Me.Controls.Remove(Enemyarray(enemycount))
+                    Me.Controls.Remove(Enemyarray(0))
                     enemycount = enemycount - 1
                 End If
             End If
@@ -342,7 +361,6 @@
         Next
     End Sub
 #End Region
-
     Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
         Dim Number As Integer
         Number = 1
@@ -358,7 +376,10 @@
         End If
     End Sub
     Sub Pos1()
+
         Dim Enemy1 As New PictureBox
+        Enemy = Enemy1
+        ' Enemy01 = Enemy1
         Enemy1.Top = +15
         Enemy1.Left = +30
         Enemy1.Size = New Size(36, 50)
@@ -367,8 +388,17 @@
         Controls.Add(Enemy1)
         CreateEnemy.Start()
         enemycount += 1
-        ReDim Preserve Enemyarray(enemycount)
+        'Enemyarray = New PictureBox() {Enemy1, Enemy, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1, Enemy1}
+        'Dim Enemyarray(0), Enemyarray(20)
+        'Enemyarray(0) = Enemy1
+        'Enemyarray(1) = Enemy1
+        'Enemyarray(2) = Enemy1
+        'Enemyarray(3) = Enemy1
+        'Enemyarray(4) = Enemy1
+        'Enemyarray(5) = Enemy1
         Enemyarray(enemycount) = Enemy1
+
+
     End Sub
     Sub Pos2()
         Dim Enemy2 As New PictureBox
@@ -412,10 +442,39 @@
     End Sub
     Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
         Dim F As Integer
-        For F = 0 To enemycount
-            Enemyarray(F).Left += 1
+        Dim Z As Integer = 1
 
+
+
+        For F = 0 To enemycount
+            'If enemycount = 0 Then
+            Enemyarray(0).Left += Z
+            Z += 0
+            'End If
+            ' If enemycount = 1 Then
+            Enemyarray(1).Left += Z
+            Z -= 1
+            'End If
+            'If enemycount = 2 Then
+            Enemyarray(2).Left += Z
+            'Z -= 0
+            Z = 1
+            Z -= 1
+            'End If
+            'If enemycount = 3 Then
+            Enemyarray(3).Left += Z
+            'Z += 0
+            'Z = 1
+            'enemycount = 0
+            'End If
         Next
+
+        Z = 1
+
+
+
+
+
         Dim G As Integer
         For G = 0 To enemycount2
             Enemyarray2(G).Left += 1
