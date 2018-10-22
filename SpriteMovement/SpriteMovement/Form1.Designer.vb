@@ -38,6 +38,7 @@ Partial Class Form1
         Me.Right_boundary = New System.Windows.Forms.PictureBox()
         Me.C1 = New System.Windows.Forms.PictureBox()
         Me.CreateEnemy = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Test, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,6 +143,11 @@ Partial Class Form1
         '
         Me.CreateEnemy.Interval = 1
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,4 +190,5 @@ Partial Class Form1
     Friend WithEvents Spawn As Timer
     Friend WithEvents Test As PictureBox
     Friend WithEvents CreateEnemy As Timer
+    Friend WithEvents Timer1 As Timer
 End Class
