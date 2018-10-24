@@ -31,7 +31,6 @@ Partial Class Form1
         Me.Bounds = New System.Windows.Forms.Timer(Me.components)
         Me.bullet_movement = New System.Windows.Forms.Timer(Me.components)
         Me.Spawn = New System.Windows.Forms.Timer(Me.components)
-        Me.Test = New System.Windows.Forms.PictureBox()
         Me.Bottom_boundary = New System.Windows.Forms.PictureBox()
         Me.Top_boundary = New System.Windows.Forms.PictureBox()
         Me.Left_boundary = New System.Windows.Forms.PictureBox()
@@ -39,7 +38,6 @@ Partial Class Form1
         Me.C1 = New System.Windows.Forms.PictureBox()
         Me.CreateEnemy = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.Test, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,17 +78,6 @@ Partial Class Form1
         'Spawn
         '
         Me.Spawn.Interval = 2000
-        '
-        'Test
-        '
-        Me.Test.BackColor = System.Drawing.Color.Transparent
-        Me.Test.Image = Global.SpriteMovement.My.Resources.Resources.mario1
-        Me.Test.Location = New System.Drawing.Point(725, 199)
-        Me.Test.Name = "Test"
-        Me.Test.Size = New System.Drawing.Size(36, 50)
-        Me.Test.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Test.TabIndex = 5
-        Me.Test.TabStop = False
         '
         'Bottom_boundary
         '
@@ -154,7 +141,6 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(816, 480)
-        Me.Controls.Add(Me.Test)
         Me.Controls.Add(Me.Bottom_boundary)
         Me.Controls.Add(Me.Top_boundary)
         Me.Controls.Add(Me.Left_boundary)
@@ -165,7 +151,6 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "    "
         Me.TransparencyKey = System.Drawing.Color.White
-        CType(Me.Test, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).EndInit()
@@ -188,7 +173,6 @@ Partial Class Form1
     Friend WithEvents Bottom_boundary As PictureBox
     Friend WithEvents bullet_movement As Timer
     Friend WithEvents Spawn As Timer
-    Friend WithEvents Test As PictureBox
     Friend WithEvents CreateEnemy As Timer
     Friend WithEvents Timer1 As Timer
 End Class
