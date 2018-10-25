@@ -77,7 +77,7 @@ Partial Class Form1
         '
         'Spawn
         '
-        Me.Spawn.Interval = 2000
+        Me.Spawn.Interval = 1000
         '
         'Bottom_boundary
         '
@@ -147,6 +147,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Right_boundary)
         Me.Controls.Add(Me.C1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "    "
