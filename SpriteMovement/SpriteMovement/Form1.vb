@@ -74,9 +74,10 @@ Public Class Form1
     Public Enemy3_05 As New PictureBox
     Public Enemy3_06 As New PictureBox
     Public Enemy3_07 As New PictureBox
-
-    Public spacecounter As Integer = 0
 #End Region
+    Dim GameOverIsOpen As Boolean = False
+    Public spacecounter As Integer = 0
+
 
     Public Sub New()
 
@@ -210,6 +211,273 @@ Public Class Form1
         Enemy3_05 = Enemyarray3(5)
         Enemy3_06 = Enemyarray3(6)
         Enemy3_07 = Enemyarray3(7)
+
+
+        If enemycount >= 0 Then
+            Enemy00 = Enemyarray(0)
+            If C1.Bounds.IntersectsWith(Enemy00.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 1 Then
+            Enemy01 = Enemyarray(1)
+            If C1.Bounds.IntersectsWith(Enemy01.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 2 Then
+            Enemy02 = Enemyarray(2)
+            If C1.Bounds.IntersectsWith(Enemy02.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 3 Then
+            Enemy03 = Enemyarray(3)
+            If C1.Bounds.IntersectsWith(Enemy03.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 4 Then
+            Enemy04 = Enemyarray(4)
+            If C1.Bounds.IntersectsWith(Enemy04.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 5 Then
+            Enemy05 = Enemyarray(5)
+            If C1.Bounds.IntersectsWith(Enemy05.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 6 Then
+            Enemy06 = Enemyarray(6)
+            If C1.Bounds.IntersectsWith(Enemy06.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount >= 7 Then
+            Enemy07 = Enemyarray(7)
+            If C1.Bounds.IntersectsWith(Enemy07.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 0 Then
+            Enemy2_00 = Enemyarray2(0)
+            If C1.Bounds.IntersectsWith(Enemy2_00.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 1 Then
+            Enemy2_01 = Enemyarray2(1)
+            If C1.Bounds.IntersectsWith(Enemy2_01.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 2 Then
+            Enemy2_02 = Enemyarray2(2)
+            If C1.Bounds.IntersectsWith(Enemy2_02.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 3 Then
+            Enemy2_03 = Enemyarray2(3)
+            If C1.Bounds.IntersectsWith(Enemy2_03.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 4 Then
+            Enemy2_04 = Enemyarray2(4)
+            If C1.Bounds.IntersectsWith(Enemy2_04.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 5 Then
+            Enemy2_05 = Enemyarray2(5)
+            If C1.Bounds.IntersectsWith(Enemy2_05.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 6 Then
+            Enemy2_06 = Enemyarray2(6)
+            If C1.Bounds.IntersectsWith(Enemy2_06.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount2 >= 7 Then
+            Enemy2_07 = Enemyarray2(7)
+            If C1.Bounds.IntersectsWith(Enemy2_07.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 0 Then
+            Enemy3_00 = Enemyarray3(0)
+            If C1.Bounds.IntersectsWith(Enemy3_00.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 1 Then
+            Enemy3_01 = Enemyarray3(1)
+            If C1.Bounds.IntersectsWith(Enemy3_01.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 2 Then
+            Enemy3_02 = Enemyarray3(2)
+            If C1.Bounds.IntersectsWith(Enemy3_02.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 3 Then
+            Enemy3_03 = Enemyarray3(3)
+            If C1.Bounds.IntersectsWith(Enemy3_03.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 4 Then
+            Enemy3_04 = Enemyarray3(4)
+            If C1.Bounds.IntersectsWith(Enemy3_04.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 5 Then
+            Enemy3_05 = Enemyarray3(5)
+            If C1.Bounds.IntersectsWith(Enemy3_05.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 6 Then
+            Enemy3_06 = Enemyarray3(6)
+            If C1.Bounds.IntersectsWith(Enemy3_06.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount3 >= 7 Then
+            Enemy3_07 = Enemyarray3(7)
+            If C1.Bounds.IntersectsWith(Enemy3_07.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(0, 0)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+
     End Sub
     Sub AnimationChar_right()
         Anichar_Right -= 1
@@ -369,7 +637,6 @@ Public Class Form1
         Bullet_arrayUp(BulletNumberUp) = Shoot_Up
     End Sub
     Private Sub bullet_movement_Tick(sender As Object, e As EventArgs) Handles bullet_movement.Tick
-
         Dim A As Integer
         For A = 0 To BulletNumberRight
             BulletarrayRight(A).Left += 10
