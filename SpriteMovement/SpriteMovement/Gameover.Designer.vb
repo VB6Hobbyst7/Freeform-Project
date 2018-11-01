@@ -44,7 +44,7 @@ Partial Class Gameover
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 81)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Close"
+        Me.Button1.Text = "Exit Game"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Restart
