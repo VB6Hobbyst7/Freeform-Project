@@ -2258,7 +2258,7 @@ Public Class Form1
         Testenemycount5()
         If enemycountarray5 < 7 Then
             Enemy5.Top = +400
-            Enemy5.Left = +200
+            Enemy5.Left = +385
             Enemy5.Size = New Size(36, 50)
             Enemy5.Image = My.Resources.mario1
             Enemy5.SizeMode = PictureBoxSizeMode.StretchImage
