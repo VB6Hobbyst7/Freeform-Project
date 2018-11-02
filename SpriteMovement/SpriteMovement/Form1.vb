@@ -53,6 +53,15 @@ Public Class Form1
     Public enemycountarray6 As Integer = -1
     Public enemycount6 As Integer = -1
     Public Enemyarray6(7) As PictureBox
+    Public enemycountarray7 As Integer = -1
+    Public enemycount7 As Integer = -1
+    Public Enemyarray7(7) As PictureBox
+    Public enemycountarray8 As Integer = -1
+    Public enemycount8 As Integer = -1
+    Public Enemyarray8(7) As PictureBox
+    Public enemycountarray9 As Integer = -1
+    Public enemycount9 As Integer = -1
+    Public Enemyarray9(7) As PictureBox
 #Region "Enemy Names"
     Public Enemy00 As New PictureBox
     Public Enemy01 As New PictureBox
@@ -102,9 +111,156 @@ Public Class Form1
     Public Enemy6_05 As New PictureBox
     Public Enemy6_06 As New PictureBox
     Public Enemy6_07 As New PictureBox
+    Public Enemy7_00 As New PictureBox
+    Public Enemy7_01 As New PictureBox
+    Public Enemy7_02 As New PictureBox
+    Public Enemy7_03 As New PictureBox
+    Public Enemy7_04 As New PictureBox
+    Public Enemy7_05 As New PictureBox
+    Public Enemy7_06 As New PictureBox
+    Public Enemy7_07 As New PictureBox
+    Public Enemy8_00 As New PictureBox
+    Public Enemy8_01 As New PictureBox
+    Public Enemy8_02 As New PictureBox
+    Public Enemy8_03 As New PictureBox
+    Public Enemy8_04 As New PictureBox
+    Public Enemy8_05 As New PictureBox
+    Public Enemy8_06 As New PictureBox
+    Public Enemy8_07 As New PictureBox
 #End Region
     Dim GameOverIsOpen As Boolean = False
     Public spacecounter As Integer = 0
+    Public Class GlobalVariables
+        Public Shared moveRight As Boolean
+        Public Shared moveLeft As Boolean
+        Public Shared moveUp As Boolean
+        Public Shared moveDown As Boolean
+        Public Shared Anichar_Right As Integer = 4
+        Public Shared Anichar_Up As Integer = 4
+        Public Shared Anichar_Down As Integer = 4
+        Public Shared Anichar_Left As Integer = 4
+        Public Shared BulletarrayRight() As PictureBox
+        Public Shared BulletNumberRight As Integer = -1
+        Public Shared Bullet_arrayLeft() As PictureBox
+        Public Shared BulletNumberLeft As Integer = -1
+        Public Shared Bullet_arrayUp() As PictureBox
+        Public Shared BulletNumberUp As Integer = -1
+        Public Shared Bullet_arrayDown() As PictureBox
+        Public Shared BulletNumberDown As Integer = -1
+#Region "Animation Pictures"
+        Public Shared PokRight As Image = My.Resources.Pokemon_right_1
+        Public Shared PokRight2 As Image = My.Resources.Pokemon_right_2
+        Public Shared PokRight3 As Image = My.Resources.Pokemon_right_3
+        Public Shared PokRight4 As Image = My.Resources.Pokemon_right_4
+        Public Shared PokLeft As Image = My.Resources.Pokemon_Left_1
+        Public Shared PokLeft2 As Image = My.Resources.Pokemon_Left_2
+        Public Shared PokLeft3 As Image = My.Resources.Pokemon_Left_3
+        Public Shared PokLeft4 As Image = My.Resources.Pokemon_Left_4
+        Public Shared PokDown As Image = My.Resources.Pokemon_Down_1
+        Public Shared PokDown2 As Image = My.Resources.Pokemon_Down_2
+        Public Shared PokDown3 As Image = My.Resources.Pokemon_Down_3
+        Public Shared PokDown4 As Image = My.Resources.Pokemon_Down_4
+        Public Shared PokUp As Image = My.Resources.Pokemon_Up_1
+        Public Shared PokUp2 As Image = My.Resources.Pokemon_Up_2
+        Public Shared PokUp3 As Image = My.Resources.Pokemon_Up_3
+        Public Shared PokUp4 As Image = My.Resources.Pokemon_Up_4
+#End Region
+        Public Shared enemycountarray As Integer = -1
+        Public Shared enemycount As Integer = -1
+        Public Shared Enemyarray(7) As PictureBox
+        Public Shared enemycountarray2 As Integer = -1
+        Public Shared enemycount2 As Integer = -1
+        Public Shared Enemyarray2(7) As PictureBox
+        Public Shared enemycountarray3 As Integer = -1
+        Public Shared enemycount3 As Integer = -1
+        Public Shared Enemyarray3(7) As PictureBox
+        Public Shared enemycountarray4 As Integer = -1
+        Public Shared enemycount4 As Integer = -1
+        Public Shared Enemyarray4(7) As PictureBox
+        Public Shared enemycountarray5 As Integer = -1
+        Public Shared enemycount5 As Integer = -1
+        Public Shared Enemyarray5(7) As PictureBox
+        Public Shared enemycountarray6 As Integer = -1
+        Public Shared enemycount6 As Integer = -1
+        Public Shared Enemyarray6(7) As PictureBox
+        Public Shared enemycountarray7 As Integer = -1
+        Public Shared enemycount7 As Integer = -1
+        Public Shared Enemyarray7(7) As PictureBox
+        Public Shared enemycountarray8 As Integer = -1
+        Public Shared enemycount8 As Integer = -1
+        Public Shared Enemyarray8(7) As PictureBox
+        Public Shared enemycountarray9 As Integer = -1
+        Public Shared enemycount9 As Integer = -1
+        Public Shared Enemyarray9(7) As PictureBox
+#Region "Enemy Names"
+        Public Shared Enemy00 As New PictureBox
+        Public Shared Enemy01 As New PictureBox
+        Public Shared Enemy02 As New PictureBox
+        Public Shared Enemy03 As New PictureBox
+        Public Shared Enemy04 As New PictureBox
+        Public Shared Enemy05 As New PictureBox
+        Public Shared Enemy06 As New PictureBox
+        Public Shared Enemy07 As New PictureBox
+        Public Shared Enemy2_00 As New PictureBox
+        Public Shared Enemy2_01 As New PictureBox
+        Public Shared Enemy2_02 As New PictureBox
+        Public Shared Enemy2_03 As New PictureBox
+        Public Shared Enemy2_04 As New PictureBox
+        Public Shared Enemy2_05 As New PictureBox
+        Public Shared Enemy2_06 As New PictureBox
+        Public Shared Enemy2_07 As New PictureBox
+        Public Shared Enemy3_00 As New PictureBox
+        Public Shared Enemy3_01 As New PictureBox
+        Public Shared Enemy3_02 As New PictureBox
+        Public Shared Enemy3_03 As New PictureBox
+        Public Shared Enemy3_04 As New PictureBox
+        Public Shared Enemy3_05 As New PictureBox
+        Public Shared Enemy3_06 As New PictureBox
+        Public Shared Enemy3_07 As New PictureBox
+        Public Shared Enemy4_00 As New PictureBox
+        Public Shared Enemy4_01 As New PictureBox
+        Public Shared Enemy4_02 As New PictureBox
+        Public Shared Enemy4_03 As New PictureBox
+        Public Shared Enemy4_04 As New PictureBox
+        Public Shared Enemy4_05 As New PictureBox
+        Public Shared Enemy4_06 As New PictureBox
+        Public Shared Enemy4_07 As New PictureBox
+        Public Shared Enemy5_00 As New PictureBox
+        Public Shared Enemy5_01 As New PictureBox
+        Public Shared Enemy5_02 As New PictureBox
+        Public Shared Enemy5_03 As New PictureBox
+        Public Shared Enemy5_04 As New PictureBox
+        Public Shared Enemy5_05 As New PictureBox
+        Public Shared Enemy5_06 As New PictureBox
+        Public Shared Enemy5_07 As New PictureBox
+        Public Shared Enemy6_00 As New PictureBox
+        Public Shared Enemy6_01 As New PictureBox
+        Public Shared Enemy6_02 As New PictureBox
+        Public Shared Enemy6_03 As New PictureBox
+        Public Shared Enemy6_04 As New PictureBox
+        Public Shared Enemy6_05 As New PictureBox
+        Public Shared Enemy6_06 As New PictureBox
+        Public Shared Enemy6_07 As New PictureBox
+        Public Shared Enemy7_00 As New PictureBox
+        Public Shared Enemy7_01 As New PictureBox
+        Public Shared Enemy7_02 As New PictureBox
+        Public Shared Enemy7_03 As New PictureBox
+        Public Shared Enemy7_04 As New PictureBox
+        Public Shared Enemy7_05 As New PictureBox
+        Public Shared Enemy7_06 As New PictureBox
+        Public Shared Enemy7_07 As New PictureBox
+        Public Shared Enemy8_00 As New PictureBox
+        Public Shared Enemy8_01 As New PictureBox
+        Public Shared Enemy8_02 As New PictureBox
+        Public Shared Enemy8_03 As New PictureBox
+        Public Shared Enemy8_04 As New PictureBox
+        Public Shared Enemy8_05 As New PictureBox
+        Public Shared Enemy8_06 As New PictureBox
+        Public Shared Enemy8_07 As New PictureBox
+#End Region
+        Dim GameOverIsOpen As Boolean = False
+        Public Shared spacecounter As Integer = 0
+    End Class
 
 
     Public Sub New()
@@ -263,6 +419,14 @@ Public Class Form1
         Enemy6_05 = Enemyarray6(5)
         Enemy6_06 = Enemyarray6(6)
         Enemy6_07 = Enemyarray6(7)
+        Enemy7_00 = Enemyarray7(0)
+        Enemy7_01 = Enemyarray7(1)
+        Enemy7_02 = Enemyarray7(2)
+        Enemy7_03 = Enemyarray7(3)
+        Enemy7_04 = Enemyarray7(4)
+        Enemy7_05 = Enemyarray7(5)
+        Enemy7_06 = Enemyarray7(6)
+        Enemy7_07 = Enemyarray7(7)
 
         If enemycount >= 0 Then
             Enemy00 = Enemyarray(0)
@@ -784,6 +948,94 @@ Public Class Form1
         If enemycount6 >= 7 Then
             Enemy6_07 = Enemyarray6(7)
             If C1.Bounds.IntersectsWith(Enemy6_07.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 0 Then
+            Enemy7_00 = Enemyarray7(0)
+            If C1.Bounds.IntersectsWith(Enemy7_00.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 1 Then
+            Enemy7_01 = Enemyarray7(1)
+            If C1.Bounds.IntersectsWith(Enemy7_01.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 2 Then
+            Enemy7_02 = Enemyarray7(2)
+            If C1.Bounds.IntersectsWith(Enemy7_02.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 3 Then
+            Enemy7_03 = Enemyarray7(3)
+            If C1.Bounds.IntersectsWith(Enemy7_03.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 4 Then
+            Enemy7_04 = Enemyarray7(4)
+            If C1.Bounds.IntersectsWith(Enemy7_04.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 5 Then
+            Enemy7_05 = Enemyarray7(5)
+            If C1.Bounds.IntersectsWith(Enemy7_05.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 6 Then
+            Enemy7_06 = Enemyarray7(6)
+            If C1.Bounds.IntersectsWith(Enemy7_06.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount7 >= 7 Then
+            Enemy7_07 = Enemyarray7(7)
+            If C1.Bounds.IntersectsWith(Enemy7_07.Bounds) Then
                 Dim GameOverForm As Gameover = New Gameover
                 GameOverForm.Show()
                 C1.Location = New Point(15000, 15000)
@@ -1327,7 +1579,7 @@ Public Class Form1
                 End If
             End If
             If enemycount5 >= 4 Then
-                Enemy5_04 = Enemyarray4(4)
+                Enemy5_04 = Enemyarray5(4)
                 If BulletarrayRight(A).Bounds.IntersectsWith(Enemy5_04.Bounds) Then
                     Me.Controls.Remove(BulletarrayRight(A))
                     BulletarrayRight(A).Left = 2000
@@ -1409,44 +1661,44 @@ Public Class Form1
                 End If
             End If
             'make all of these 6
-            If enemycount5 >= 4 Then
-                Enemy5_04 = Enemyarray4(4)
-                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy5_04.Bounds) Then
+            If enemycount6 >= 4 Then
+                Enemy6_04 = Enemyarray6(4)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy6_04.Bounds) Then
                     Me.Controls.Remove(BulletarrayRight(A))
                     BulletarrayRight(A).Left = 2000
                     BulletarrayRight(A).Top = 2000
-                    Enemy5_04.Visible = False
-                    Enemy5_04.Location = New Point(20000, 20000)
+                    Enemy6_04.Visible = False
+                    Enemy6_04.Location = New Point(20000, 20000)
                 End If
             End If
-            If enemycount5 >= 5 Then
-                Enemy5_05 = Enemyarray5(5)
-                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy5_05.Bounds) Then
+            If enemycount6 >= 5 Then
+                Enemy6_05 = Enemyarray6(5)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy6_05.Bounds) Then
                     Me.Controls.Remove(BulletarrayRight(A))
                     BulletarrayRight(A).Left = 2000
                     BulletarrayRight(A).Top = 2000
-                    Enemy5_05.Visible = False
-                    Enemy5_05.Location = New Point(20000, 20000)
+                    Enemy6_05.Visible = False
+                    Enemy6_05.Location = New Point(20000, 20000)
                 End If
             End If
-            If enemycount5 >= 6 Then
-                Enemy5_06 = Enemyarray5(6)
-                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy5_06.Bounds) Then
+            If enemycount6 >= 6 Then
+                Enemy6_06 = Enemyarray6(6)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy6_06.Bounds) Then
                     Me.Controls.Remove(Bullet_arrayLeft(A))
                     BulletarrayRight(A).Left = 2000
                     BulletarrayRight(A).Top = 2000
-                    Enemy5_06.Visible = False
-                    Enemy5_06.Location = New Point(20000, 20000)
+                    Enemy6_06.Visible = False
+                    Enemy6_06.Location = New Point(20000, 20000)
                 End If
             End If
-            If enemycount5 >= 7 Then
-                Enemy5_07 = Enemyarray5(7)
-                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy5_07.Bounds) Then
+            If enemycount6 >= 7 Then
+                Enemy6_07 = Enemyarray6(7)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy6_07.Bounds) Then
                     Me.Controls.Remove(BulletarrayRight(A))
                     BulletarrayRight(A).Left = 2000
                     BulletarrayRight(A).Top = 2000
-                    Enemy5_07.Visible = False
-                    Enemy5_07.Location = New Point(20000, 20000)
+                    Enemy6_07.Visible = False
+                    Enemy6_07.Location = New Point(20000, 20000)
                 End If
             End If
 #End Region
@@ -1901,6 +2153,96 @@ Public Class Form1
                 End If
             End If
 #End Region
+#Region "Enemy6 left"
+            If enemycount6 >= 0 Then
+                Enemy6_00 = Enemyarray6(0)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_00.Visible = False
+                    Enemy6_00.Left = 20000
+                    Enemy6_00.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 1 Then
+                Enemy6_01 = Enemyarray6(1)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_01.Visible = False
+                    Enemy6_01.Left = 20000
+                    Enemy6_01.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 2 Then
+                Enemy6_02 = Enemyarray6(2)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_02.Visible = False
+                    Enemy6_02.Left = 20000
+                    Enemy6_02.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 3 Then
+                Enemy6_03 = Enemyarray6(3)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_03.Visible = False
+                    Enemy6_03.Left = 20000
+                    Enemy6_03.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 4 Then
+                Enemy6_04 = Enemyarray6(4)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_04.Visible = False
+                    Enemy6_04.Left = 20000
+                    Enemy6_04.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 5 Then
+                Enemy6_05 = Enemyarray6(5)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_05.Visible = False
+                    Enemy6_05.Left = 20000
+                    Enemy6_05.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 6 Then
+                Enemy6_06 = Enemyarray6(6)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_06.Visible = False
+                    Enemy6_06.Left = 20000
+                    Enemy6_06.Top = 20000
+                End If
+            End If
+            If enemycount6 >= 7 Then
+                Enemy6_07 = Enemyarray6(7)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy6_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy6_07.Visible = False
+                    Enemy6_07.Left = 20000
+                    Enemy6_07.Top = 20000
+                End If
+            End If
+#End Region
         Next
         '--------------------------------------------------------------------------
         Dim C As Integer
@@ -2316,6 +2658,88 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_07.Visible = False
                     Enemy5_07.Location = New Point(20000, 20000)
+                End If
+            End If
+#End Region
+#Region "Enemy6 down"
+            If enemycount6 >= 0 Then
+                Enemy6_00 = Enemyarray6(0)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_00.Visible = False
+                    Enemy6_00.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 1 Then
+                Enemy6_01 = Enemyarray6(1)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_01.Visible = False
+                    Enemy6_01.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 2 Then
+                Enemy6_02 = Enemyarray6(2)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_02.Visible = False
+                    Enemy6_02.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 3 Then
+                Enemy6_03 = Enemyarray6(3)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_03.Visible = False
+                    Enemy6_03.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 4 Then
+                Enemy6_04 = Enemyarray6(4)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_04.Visible = False
+                    Enemy6_04.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 5 Then
+                Enemy6_05 = Enemyarray6(5)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_05.Visible = False
+                    Enemy6_05.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 6 Then
+                Enemy6_06 = Enemyarray6(6)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_06.Visible = False
+                    Enemy6_06.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 7 Then
+                Enemy6_07 = Enemyarray6(7)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy6_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy6_07.Visible = False
+                    Enemy6_07.Location = New Point(20000, 20000)
                 End If
             End If
 #End Region
@@ -2737,6 +3161,88 @@ Public Class Form1
                 End If
             End If
 #End Region
+#Region "Enemy6 up"
+            If enemycount6 >= 0 Then
+                Enemy6_00 = Enemyarray6(0)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_00.Visible = False
+                    Enemy6_00.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 1 Then
+                Enemy6_01 = Enemyarray6(1)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_01.Visible = False
+                    Enemy6_01.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 2 Then
+                Enemy6_02 = Enemyarray6(2)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_02.Visible = False
+                    Enemy6_02.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 3 Then
+                Enemy6_03 = Enemyarray6(3)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_03.Visible = False
+                    Enemy6_03.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 4 Then
+                Enemy6_04 = Enemyarray6(4)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_04.Visible = False
+                    Enemy6_04.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 5 Then
+                Enemy6_05 = Enemyarray6(5)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_05.Visible = False
+                    Enemy6_05.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 6 Then
+                Enemy6_06 = Enemyarray6(6)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_06.Visible = False
+                    Enemy6_06.Location = New Point(20000, 20000)
+                End If
+            End If
+            If enemycount6 >= 7 Then
+                Enemy6_07 = Enemyarray6(7)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy6_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy6_07.Visible = False
+                    Enemy6_07.Location = New Point(20000, 20000)
+                End If
+            End If
+#End Region
         Next
     End Sub
 #End Region
@@ -2744,8 +3250,8 @@ Public Class Form1
     Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
         Dim Number As Integer
         Dim Rng As Random = New Random()
-        Number = Rng.Next(1, 7)
-        'Number = 6
+        Number = Rng.Next(1, 8)
+        'Number = 7
         If Number = 1 Then
             Pos1()
         ElseIf Number = 2 Then
@@ -2758,6 +3264,8 @@ Public Class Form1
             Pos5()
         ElseIf Number = 6 Then
             Pos6()
+        ElseIf Number = 7 Then
+            Pos7()
         End If
     End Sub
     Sub Pos1()
@@ -3126,6 +3634,67 @@ Public Class Form1
             enemycount6 = 7
         End If
     End Sub
+    Sub Pos7()
+        Dim Enemy7 As New PictureBox
+        enemycount7 += 1
+        Testenemycount7()
+        If enemycountarray7 < 7 Then
+            Enemy7.Location = New Point(715, 110)
+            Enemy7.Size = New Size(36, 50)
+            Enemy7.Image = My.Resources.mario1
+            Enemy7.SizeMode = PictureBoxSizeMode.StretchImage
+            Enemy7.BackColor = Color.Transparent
+            Controls.Add(Enemy7)
+            CreateEnemy.Start()
+            enemycountarray7 += 1
+            Enemyarray7(enemycountarray7) = Enemy7
+        End If
+    End Sub
+    Sub Testenemycount7()
+        If enemycount7 = 8 Then
+            Enemy7_00 = Enemyarray7(0)
+            Enemy7_00.Visible = True
+            Enemy7_00.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 9 Then
+            Enemy7_01 = Enemyarray7(1)
+            Enemy7_01.Visible = True
+            Enemy7_01.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 10 Then
+            Enemy7_02 = Enemyarray7(2)
+            Enemy7_02.Visible = True
+            Enemy7_02.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 11 Then
+            Enemy7_03 = Enemyarray7(3)
+            Enemy7_03.Visible = True
+            Enemy7_03.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 12 Then
+            Enemy7_04 = Enemyarray7(4)
+            Enemy7_04.Visible = True
+            Enemy7_04.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 13 Then
+            Enemy7_05 = Enemyarray7(5)
+            Enemy7_05.Visible = True
+            Enemy7_05.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 14 Then
+            Enemy7_06 = Enemyarray7(6)
+            Enemy7_06.Visible = True
+            Enemy7_06.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 15 Then
+            Enemy7_07 = Enemyarray7(7)
+            Enemy7_07.Visible = True
+            Enemy7_07.Location = New Point(715, 400)
+        End If
+        If enemycount7 = 15 Then
+            enemycount7 = 7
+        End If
+    End Sub
     Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
         Dim F As Integer
         Dim Z As Integer = 1
@@ -3386,6 +3955,48 @@ Public Class Form1
         For K = 7 To enemycountarray6
             If K = 7 Then
                 Enemyarray6(7).Top -= Y
+            End If
+        Next
+
+        Dim L As Integer
+        For L = 0 To enemycountarray7
+            If L = 0 Then
+                Enemyarray7(0).Left -= Y
+            End If
+        Next
+        For L = 1 To enemycountarray7
+            If L = 1 Then
+                Enemyarray7(1).Left -= Y
+            End If
+        Next
+        For L = 2 To enemycountarray7
+            If L = 2 Then
+                Enemyarray7(2).Left -= Y
+            End If
+        Next
+        For L = 3 To enemycountarray7
+            If L = 3 Then
+                Enemyarray7(3).Left -= Y
+            End If
+        Next
+        For L = 4 To enemycountarray7
+            If L = 4 Then
+                Enemyarray7(4).Left -= Y
+            End If
+        Next
+        For L = 5 To enemycountarray7
+            If L = 5 Then
+                Enemyarray7(5).Left -= Y
+            End If
+        Next
+        For L = 6 To enemycountarray7
+            If L = 6 Then
+                Enemyarray7(6).Left -= Y
+            End If
+        Next
+        For L = 7 To enemycountarray7
+            If L = 7 Then
+                Enemyarray7(7).Left -= Y
             End If
         Next
 
