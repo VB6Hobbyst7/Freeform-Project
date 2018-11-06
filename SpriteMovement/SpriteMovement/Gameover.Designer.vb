@@ -25,6 +25,8 @@ Partial Class Gameover
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Restart = New System.Windows.Forms.Button()
+        Me.lblscoregameover = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,6 +46,7 @@ Partial Class Gameover
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 81)
         Me.Button1.TabIndex = 1
+        Me.Button1.TabStop = False
         Me.Button1.Text = "Exit Game"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -54,18 +57,42 @@ Partial Class Gameover
         Me.Restart.Name = "Restart"
         Me.Restart.Size = New System.Drawing.Size(119, 77)
         Me.Restart.TabIndex = 2
+        Me.Restart.TabStop = False
         Me.Restart.Text = "Restart"
         Me.Restart.UseVisualStyleBackColor = True
+        '
+        'lblscoregameover
+        '
+        Me.lblscoregameover.AutoSize = True
+        Me.lblscoregameover.ForeColor = System.Drawing.Color.Maroon
+        Me.lblscoregameover.Location = New System.Drawing.Point(418, 299)
+        Me.lblscoregameover.Name = "lblscoregameover"
+        Me.lblscoregameover.Size = New System.Drawing.Size(13, 13)
+        Me.lblscoregameover.TabIndex = 9
+        Me.lblscoregameover.Text = "0"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.Maroon
+        Me.Label2.Location = New System.Drawing.Point(371, 298)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "SCORE : "
         '
         'Gameover
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblscoregameover)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Restart)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Gameover"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gameover"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -75,4 +102,6 @@ Partial Class Gameover
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Restart As Button
+    Friend WithEvents lblscoregameover As Label
+    Friend WithEvents Label2 As Label
 End Class

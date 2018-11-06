@@ -1,135 +1,7 @@
 ﻿'"random" code is in system
+Imports SpriteMovement.Form1.GlobalVariables
 Imports System
 Public Class Form1
-    Public moveRight As Boolean
-    Public moveLeft As Boolean
-    Public moveUp As Boolean
-    Public moveDown As Boolean
-    Public Anichar_Right As Integer = 4
-    Public Anichar_Up As Integer = 4
-    Public Anichar_Down As Integer = 4
-    Public Anichar_Left As Integer = 4
-    Public BulletarrayRight() As PictureBox
-    Public BulletNumberRight As Integer = -1
-    Public Bullet_arrayLeft() As PictureBox
-    Public BulletNumberLeft As Integer = -1
-    Public Bullet_arrayUp() As PictureBox
-    Public BulletNumberUp As Integer = -1
-    Public Bullet_arrayDown() As PictureBox
-    Public BulletNumberDown As Integer = -1
-#Region "Animation Pictures"
-    Public PokRight As Image = My.Resources.Pokemon_right_1
-    Public PokRight2 As Image = My.Resources.Pokemon_right_2
-    Public PokRight3 As Image = My.Resources.Pokemon_right_3
-    Public PokRight4 As Image = My.Resources.Pokemon_right_4
-    Public PokLeft As Image = My.Resources.Pokemon_Left_1
-    Public PokLeft2 As Image = My.Resources.Pokemon_Left_2
-    Public PokLeft3 As Image = My.Resources.Pokemon_Left_3
-    Public PokLeft4 As Image = My.Resources.Pokemon_Left_4
-    Public PokDown As Image = My.Resources.Pokemon_Down_1
-    Public PokDown2 As Image = My.Resources.Pokemon_Down_2
-    Public PokDown3 As Image = My.Resources.Pokemon_Down_3
-    Public PokDown4 As Image = My.Resources.Pokemon_Down_4
-    Public PokUp As Image = My.Resources.Pokemon_Up_1
-    Public PokUp2 As Image = My.Resources.Pokemon_Up_2
-    Public PokUp3 As Image = My.Resources.Pokemon_Up_3
-    Public PokUp4 As Image = My.Resources.Pokemon_Up_4
-#End Region
-    Public enemycountarray As Integer = -1
-    Public enemycount As Integer = -1
-    Public Enemyarray(7) As PictureBox
-    Public enemycountarray2 As Integer = -1
-    Public enemycount2 As Integer = -1
-    Public Enemyarray2(7) As PictureBox
-    Public enemycountarray3 As Integer = -1
-    Public enemycount3 As Integer = -1
-    Public Enemyarray3(7) As PictureBox
-    Public enemycountarray4 As Integer = -1
-    Public enemycount4 As Integer = -1
-    Public Enemyarray4(7) As PictureBox
-    Public enemycountarray5 As Integer = -1
-    Public enemycount5 As Integer = -1
-    Public Enemyarray5(7) As PictureBox
-    Public enemycountarray6 As Integer = -1
-    Public enemycount6 As Integer = -1
-    Public Enemyarray6(7) As PictureBox
-    Public enemycountarray7 As Integer = -1
-    Public enemycount7 As Integer = -1
-    Public Enemyarray7(7) As PictureBox
-    Public enemycountarray8 As Integer = -1
-    Public enemycount8 As Integer = -1
-    Public Enemyarray8(7) As PictureBox
-    Public enemycountarray9 As Integer = -1
-    Public enemycount9 As Integer = -1
-    Public Enemyarray9(7) As PictureBox
-#Region "Enemy Names"
-    Public Enemy00 As New PictureBox
-    Public Enemy01 As New PictureBox
-    Public Enemy02 As New PictureBox
-    Public Enemy03 As New PictureBox
-    Public Enemy04 As New PictureBox
-    Public Enemy05 As New PictureBox
-    Public Enemy06 As New PictureBox
-    Public Enemy07 As New PictureBox
-    Public Enemy2_00 As New PictureBox
-    Public Enemy2_01 As New PictureBox
-    Public Enemy2_02 As New PictureBox
-    Public Enemy2_03 As New PictureBox
-    Public Enemy2_04 As New PictureBox
-    Public Enemy2_05 As New PictureBox
-    Public Enemy2_06 As New PictureBox
-    Public Enemy2_07 As New PictureBox
-    Public Enemy3_00 As New PictureBox
-    Public Enemy3_01 As New PictureBox
-    Public Enemy3_02 As New PictureBox
-    Public Enemy3_03 As New PictureBox
-    Public Enemy3_04 As New PictureBox
-    Public Enemy3_05 As New PictureBox
-    Public Enemy3_06 As New PictureBox
-    Public Enemy3_07 As New PictureBox
-    Public Enemy4_00 As New PictureBox
-    Public Enemy4_01 As New PictureBox
-    Public Enemy4_02 As New PictureBox
-    Public Enemy4_03 As New PictureBox
-    Public Enemy4_04 As New PictureBox
-    Public Enemy4_05 As New PictureBox
-    Public Enemy4_06 As New PictureBox
-    Public Enemy4_07 As New PictureBox
-    Public Enemy5_00 As New PictureBox
-    Public Enemy5_01 As New PictureBox
-    Public Enemy5_02 As New PictureBox
-    Public Enemy5_03 As New PictureBox
-    Public Enemy5_04 As New PictureBox
-    Public Enemy5_05 As New PictureBox
-    Public Enemy5_06 As New PictureBox
-    Public Enemy5_07 As New PictureBox
-    Public Enemy6_00 As New PictureBox
-    Public Enemy6_01 As New PictureBox
-    Public Enemy6_02 As New PictureBox
-    Public Enemy6_03 As New PictureBox
-    Public Enemy6_04 As New PictureBox
-    Public Enemy6_05 As New PictureBox
-    Public Enemy6_06 As New PictureBox
-    Public Enemy6_07 As New PictureBox
-    Public Enemy7_00 As New PictureBox
-    Public Enemy7_01 As New PictureBox
-    Public Enemy7_02 As New PictureBox
-    Public Enemy7_03 As New PictureBox
-    Public Enemy7_04 As New PictureBox
-    Public Enemy7_05 As New PictureBox
-    Public Enemy7_06 As New PictureBox
-    Public Enemy7_07 As New PictureBox
-    Public Enemy8_00 As New PictureBox
-    Public Enemy8_01 As New PictureBox
-    Public Enemy8_02 As New PictureBox
-    Public Enemy8_03 As New PictureBox
-    Public Enemy8_04 As New PictureBox
-    Public Enemy8_05 As New PictureBox
-    Public Enemy8_06 As New PictureBox
-    Public Enemy8_07 As New PictureBox
-#End Region
-    Dim GameOverIsOpen As Boolean = False
-    Public spacecounter As Integer = 0
     Public Class GlobalVariables
         Public Shared moveRight As Boolean
         Public Shared moveLeft As Boolean
@@ -260,6 +132,11 @@ Public Class Form1
 #End Region
         Dim GameOverIsOpen As Boolean = False
         Public Shared spacecounter As Integer = 0
+        Public Shared frmisopen As Boolean = False
+        Public Shared Restartbuttonpush As Boolean = False
+        Public Shared Score As Integer
+        Public Shared Scoretime As Integer
+        Public Shared Killscore As Integer
     End Class
 
 
@@ -334,9 +211,6 @@ Public Class Form1
             Case Keys.Space
                 spacecounter = 0
         End Select
-    End Sub
-    Private Sub C1_Click(sender As Object, e As EventArgs) Handles C1.Click
-
     End Sub
 
     Private Sub movement_Tick(sender As Object, e As EventArgs) Handles movement.Tick
@@ -1044,6 +918,94 @@ Public Class Form1
                 movement.Enabled = False
             End If
         End If
+        If enemycount8 >= 0 Then
+            Enemy8_00 = Enemyarray8(0)
+            If C1.Bounds.IntersectsWith(Enemy8_00.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 1 Then
+            Enemy8_01 = Enemyarray8(1)
+            If C1.Bounds.IntersectsWith(Enemy8_01.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 2 Then
+            Enemy8_02 = Enemyarray8(2)
+            If C1.Bounds.IntersectsWith(Enemy8_02.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 3 Then
+            Enemy8_03 = Enemyarray8(3)
+            If C1.Bounds.IntersectsWith(Enemy8_03.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 4 Then
+            Enemy8_04 = Enemyarray8(4)
+            If C1.Bounds.IntersectsWith(Enemy8_04.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 5 Then
+            Enemy8_05 = Enemyarray8(5)
+            If C1.Bounds.IntersectsWith(Enemy8_05.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 6 Then
+            Enemy8_06 = Enemyarray8(6)
+            If C1.Bounds.IntersectsWith(Enemy8_06.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
+        If enemycount8 >= 7 Then
+            Enemy8_07 = Enemyarray8(7)
+            If C1.Bounds.IntersectsWith(Enemy8_07.Bounds) Then
+                Dim GameOverForm As Gameover = New Gameover
+                GameOverForm.Show()
+                C1.Location = New Point(15000, 15000)
+                Spawn.Enabled = False
+                CreateEnemy.Enabled = False
+                movement.Enabled = False
+            End If
+        End If
     End Sub
     Sub AnimationChar_right()
         Anichar_Right -= 1
@@ -1137,6 +1099,7 @@ Public Class Form1
 
     Private Sub Bounds_Tick(sender As Object, e As EventArgs) Handles Bounds.Tick
         setArray()
+        Restartbutton()
         If C1.Bounds.IntersectsWith(Right_boundary.Bounds) Then
             C1.Left = C1.Left - 3
         End If
@@ -1218,6 +1181,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy00.Visible = False
                     Enemy00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 1 Then
@@ -1228,6 +1194,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy01.Visible = False
                     Enemy01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 2 Then
@@ -1238,6 +1207,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy02.Visible = False
                     Enemy02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 3 Then
@@ -1248,6 +1220,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy03.Visible = False
                     Enemy03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 4 Then
@@ -1258,6 +1233,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy04.Visible = False
                     Enemy04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 5 Then
@@ -1268,6 +1246,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy05.Visible = False
                     Enemy05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 6 Then
@@ -1278,6 +1259,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy06.Visible = False
                     Enemy06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 7 Then
@@ -1288,6 +1272,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy07.Visible = False
                     Enemy07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1300,6 +1287,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_00.Visible = False
                     Enemy2_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 1 Then
@@ -1310,6 +1300,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_01.Visible = False
                     Enemy2_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 2 Then
@@ -1320,6 +1313,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_02.Visible = False
                     Enemy2_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 3 Then
@@ -1330,6 +1326,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_03.Visible = False
                     Enemy2_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 4 Then
@@ -1340,6 +1339,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_04.Visible = False
                     Enemy2_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 5 Then
@@ -1350,6 +1352,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_05.Visible = False
                     Enemy2_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 6 Then
@@ -1360,6 +1365,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_06.Visible = False
                     Enemy2_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 7 Then
@@ -1370,6 +1378,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy2_07.Visible = False
                     Enemy2_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1382,6 +1393,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_00.Visible = False
                     Enemy3_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 1 Then
@@ -1392,6 +1406,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_01.Visible = False
                     Enemy3_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 2 Then
@@ -1402,6 +1419,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_02.Visible = False
                     Enemy3_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 3 Then
@@ -1412,6 +1432,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_03.Visible = False
                     Enemy3_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 4 Then
@@ -1422,6 +1445,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_04.Visible = False
                     Enemy3_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 5 Then
@@ -1432,6 +1458,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_05.Visible = False
                     Enemy3_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 6 Then
@@ -1442,6 +1471,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_06.Visible = False
                     Enemy3_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 7 Then
@@ -1452,6 +1484,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy3_07.Visible = False
                     Enemy3_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1464,6 +1499,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_00.Visible = False
                     Enemy4_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 1 Then
@@ -1474,6 +1512,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_01.Visible = False
                     Enemy4_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 2 Then
@@ -1484,6 +1525,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_02.Visible = False
                     Enemy4_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 3 Then
@@ -1494,6 +1538,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_03.Visible = False
                     Enemy4_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 4 Then
@@ -1504,6 +1551,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_04.Visible = False
                     Enemy4_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 5 Then
@@ -1514,6 +1564,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_05.Visible = False
                     Enemy4_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 6 Then
@@ -1524,6 +1577,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_06.Visible = False
                     Enemy4_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 7 Then
@@ -1534,6 +1590,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy4_07.Visible = False
                     Enemy4_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1546,6 +1605,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_00.Visible = False
                     Enemy5_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 1 Then
@@ -1556,6 +1618,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_01.Visible = False
                     Enemy5_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 2 Then
@@ -1566,6 +1631,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_02.Visible = False
                     Enemy5_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 3 Then
@@ -1576,6 +1644,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_03.Visible = False
                     Enemy5_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 4 Then
@@ -1586,6 +1657,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_04.Visible = False
                     Enemy5_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 5 Then
@@ -1596,6 +1670,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_05.Visible = False
                     Enemy5_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 6 Then
@@ -1606,6 +1683,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_06.Visible = False
                     Enemy5_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 7 Then
@@ -1616,6 +1696,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy5_07.Visible = False
                     Enemy5_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1628,6 +1711,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_00.Visible = False
                     Enemy6_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 1 Then
@@ -1638,6 +1724,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_01.Visible = False
                     Enemy6_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 2 Then
@@ -1648,6 +1737,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_02.Visible = False
                     Enemy6_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 3 Then
@@ -1658,9 +1750,11 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_03.Visible = False
                     Enemy6_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
-            'make all of these 6
             If enemycount6 >= 4 Then
                 Enemy6_04 = Enemyarray6(4)
                 If BulletarrayRight(A).Bounds.IntersectsWith(Enemy6_04.Bounds) Then
@@ -1669,6 +1763,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_04.Visible = False
                     Enemy6_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 5 Then
@@ -1679,6 +1776,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_05.Visible = False
                     Enemy6_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 6 Then
@@ -1689,6 +1789,9 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_06.Visible = False
                     Enemy6_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 7 Then
@@ -1699,6 +1802,221 @@ Public Class Form1
                     BulletarrayRight(A).Top = 2000
                     Enemy6_07.Visible = False
                     Enemy6_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy7 right"
+            If enemycount7 >= 0 Then
+                Enemy7_00 = Enemyarray7(0)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_00.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_00.Visible = False
+                    Enemy7_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 1 Then
+                Enemy7_01 = Enemyarray7(1)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_01.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_01.Visible = False
+                    Enemy7_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 2 Then
+                Enemy7_02 = Enemyarray7(2)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_02.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_02.Visible = False
+                    Enemy7_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 3 Then
+                Enemy7_03 = Enemyarray7(3)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_03.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_03.Visible = False
+                    Enemy7_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 4 Then
+                Enemy7_04 = Enemyarray7(4)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_04.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_04.Visible = False
+                    Enemy7_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 5 Then
+                Enemy7_05 = Enemyarray7(5)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_05.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_05.Visible = False
+                    Enemy7_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 6 Then
+                Enemy7_06 = Enemyarray7(6)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_06.Visible = False
+                    Enemy7_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 7 Then
+                Enemy7_07 = Enemyarray7(7)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy7_07.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy7_07.Visible = False
+                    Enemy7_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy8 right"
+            If enemycount8 >= 0 Then
+                Enemy8_00 = Enemyarray8(0)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_00.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_00.Visible = False
+                    Enemy8_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 1 Then
+                Enemy8_01 = Enemyarray8(1)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_01.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_01.Visible = False
+                    Enemy8_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 2 Then
+                Enemy8_02 = Enemyarray8(2)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_02.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_02.Visible = False
+                    Enemy8_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 3 Then
+                Enemy8_03 = Enemyarray8(3)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_03.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_03.Visible = False
+                    Enemy8_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 4 Then
+                Enemy8_04 = Enemyarray8(4)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_04.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_04.Visible = False
+                    Enemy8_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 5 Then
+                Enemy8_05 = Enemyarray8(5)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_05.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_05.Visible = False
+                    Enemy8_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 6 Then
+                Enemy8_06 = Enemyarray8(6)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_06.Visible = False
+                    Enemy8_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 7 Then
+                Enemy8_07 = Enemyarray8(7)
+                If BulletarrayRight(A).Bounds.IntersectsWith(Enemy8_07.Bounds) Then
+                    Me.Controls.Remove(BulletarrayRight(A))
+                    BulletarrayRight(A).Left = 2000
+                    BulletarrayRight(A).Top = 2000
+                    Enemy8_07.Visible = False
+                    Enemy8_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1719,6 +2037,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy00.Visible = False
                     Enemy00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 1 Then
@@ -1729,6 +2050,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy01.Visible = False
                     Enemy01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 2 Then
@@ -1739,6 +2063,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy02.Visible = False
                     Enemy02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 3 Then
@@ -1749,6 +2076,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy03.Visible = False
                     Enemy03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 4 Then
@@ -1759,6 +2089,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy04.Visible = False
                     Enemy04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 5 Then
@@ -1769,6 +2102,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy05.Visible = False
                     Enemy05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 6 Then
@@ -1779,6 +2115,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy06.Visible = False
                     Enemy06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 7 Then
@@ -1789,6 +2128,9 @@ Public Class Form1
                     Bullet_arrayLeft(B).Top = 2000
                     Enemy07.Visible = False
                     Enemy07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1802,6 +2144,9 @@ Public Class Form1
                     Enemy2_00.Visible = False
                     Enemy2_00.Left = 20000
                     Enemy2_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 1 Then
@@ -1813,6 +2158,9 @@ Public Class Form1
                     Enemy2_01.Visible = False
                     Enemy2_01.Left = 20000
                     Enemy2_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 2 Then
@@ -1824,6 +2172,9 @@ Public Class Form1
                     Enemy2_02.Visible = False
                     Enemy2_02.Left = 20000
                     Enemy2_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 3 Then
@@ -1835,6 +2186,9 @@ Public Class Form1
                     Enemy2_03.Visible = False
                     Enemy2_03.Left = 20000
                     Enemy2_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 4 Then
@@ -1846,6 +2200,9 @@ Public Class Form1
                     Enemy2_04.Visible = False
                     Enemy2_04.Left = 20000
                     Enemy2_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 5 Then
@@ -1857,6 +2214,9 @@ Public Class Form1
                     Enemy2_05.Visible = False
                     Enemy2_05.Left = 20000
                     Enemy2_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 6 Then
@@ -1868,6 +2228,9 @@ Public Class Form1
                     Enemy2_06.Visible = False
                     Enemy2_06.Left = 20000
                     Enemy2_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 7 Then
@@ -1879,6 +2242,9 @@ Public Class Form1
                     Enemy2_07.Visible = False
                     Enemy2_07.Left = 20000
                     Enemy2_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 
@@ -1893,6 +2259,9 @@ Public Class Form1
                     Enemy3_00.Visible = False
                     Enemy3_00.Left = 20000
                     Enemy3_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 1 Then
@@ -1904,6 +2273,9 @@ Public Class Form1
                     Enemy3_01.Visible = False
                     Enemy3_01.Left = 20000
                     Enemy3_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 2 Then
@@ -1915,6 +2287,9 @@ Public Class Form1
                     Enemy3_02.Visible = False
                     Enemy3_02.Left = 20000
                     Enemy3_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 3 Then
@@ -1926,6 +2301,9 @@ Public Class Form1
                     Enemy3_03.Visible = False
                     Enemy3_03.Left = 20000
                     Enemy3_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 4 Then
@@ -1937,6 +2315,9 @@ Public Class Form1
                     Enemy3_04.Visible = False
                     Enemy3_04.Left = 20000
                     Enemy3_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 5 Then
@@ -1948,6 +2329,9 @@ Public Class Form1
                     Enemy3_05.Visible = False
                     Enemy3_05.Left = 20000
                     Enemy3_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 6 Then
@@ -1959,6 +2343,9 @@ Public Class Form1
                     Enemy3_06.Visible = False
                     Enemy3_06.Left = 20000
                     Enemy3_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 7 Then
@@ -1970,6 +2357,9 @@ Public Class Form1
                     Enemy3_07.Visible = False
                     Enemy3_07.Left = 20000
                     Enemy3_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -1983,6 +2373,9 @@ Public Class Form1
                     Enemy4_00.Visible = False
                     Enemy4_00.Left = 20000
                     Enemy4_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 1 Then
@@ -1994,6 +2387,9 @@ Public Class Form1
                     Enemy4_01.Visible = False
                     Enemy4_01.Left = 20000
                     Enemy4_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 2 Then
@@ -2005,6 +2401,9 @@ Public Class Form1
                     Enemy4_02.Visible = False
                     Enemy4_02.Left = 20000
                     Enemy4_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 3 Then
@@ -2016,6 +2415,9 @@ Public Class Form1
                     Enemy4_03.Visible = False
                     Enemy4_03.Left = 20000
                     Enemy4_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 4 Then
@@ -2027,6 +2429,9 @@ Public Class Form1
                     Enemy4_04.Visible = False
                     Enemy4_04.Left = 20000
                     Enemy4_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 5 Then
@@ -2038,6 +2443,9 @@ Public Class Form1
                     Enemy4_05.Visible = False
                     Enemy4_05.Left = 20000
                     Enemy4_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 6 Then
@@ -2049,6 +2457,9 @@ Public Class Form1
                     Enemy4_06.Visible = False
                     Enemy4_06.Left = 20000
                     Enemy4_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 7 Then
@@ -2060,6 +2471,9 @@ Public Class Form1
                     Enemy4_07.Visible = False
                     Enemy4_07.Left = 20000
                     Enemy4_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2073,6 +2487,9 @@ Public Class Form1
                     Enemy5_00.Visible = False
                     Enemy5_00.Left = 20000
                     Enemy5_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 1 Then
@@ -2084,6 +2501,9 @@ Public Class Form1
                     Enemy5_01.Visible = False
                     Enemy5_01.Left = 20000
                     Enemy5_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 2 Then
@@ -2095,6 +2515,9 @@ Public Class Form1
                     Enemy5_02.Visible = False
                     Enemy5_02.Left = 20000
                     Enemy5_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 3 Then
@@ -2106,6 +2529,9 @@ Public Class Form1
                     Enemy5_03.Visible = False
                     Enemy5_03.Left = 20000
                     Enemy5_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 4 Then
@@ -2117,6 +2543,9 @@ Public Class Form1
                     Enemy5_04.Visible = False
                     Enemy5_04.Left = 20000
                     Enemy5_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 5 Then
@@ -2128,6 +2557,9 @@ Public Class Form1
                     Enemy5_05.Visible = False
                     Enemy5_05.Left = 20000
                     Enemy5_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 6 Then
@@ -2139,6 +2571,9 @@ Public Class Form1
                     Enemy5_06.Visible = False
                     Enemy5_06.Left = 20000
                     Enemy5_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 7 Then
@@ -2150,6 +2585,9 @@ Public Class Form1
                     Enemy5_07.Visible = False
                     Enemy5_07.Left = 20000
                     Enemy5_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2163,6 +2601,9 @@ Public Class Form1
                     Enemy6_00.Visible = False
                     Enemy6_00.Left = 20000
                     Enemy6_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 1 Then
@@ -2174,6 +2615,9 @@ Public Class Form1
                     Enemy6_01.Visible = False
                     Enemy6_01.Left = 20000
                     Enemy6_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 2 Then
@@ -2185,6 +2629,9 @@ Public Class Form1
                     Enemy6_02.Visible = False
                     Enemy6_02.Left = 20000
                     Enemy6_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 3 Then
@@ -2196,6 +2643,9 @@ Public Class Form1
                     Enemy6_03.Visible = False
                     Enemy6_03.Left = 20000
                     Enemy6_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 4 Then
@@ -2207,6 +2657,9 @@ Public Class Form1
                     Enemy6_04.Visible = False
                     Enemy6_04.Left = 20000
                     Enemy6_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 5 Then
@@ -2218,6 +2671,9 @@ Public Class Form1
                     Enemy6_05.Visible = False
                     Enemy6_05.Left = 20000
                     Enemy6_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 6 Then
@@ -2229,6 +2685,9 @@ Public Class Form1
                     Enemy6_06.Visible = False
                     Enemy6_06.Left = 20000
                     Enemy6_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 7 Then
@@ -2240,6 +2699,237 @@ Public Class Form1
                     Enemy6_07.Visible = False
                     Enemy6_07.Left = 20000
                     Enemy6_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy7 left"
+            If enemycount7 >= 0 Then
+                Enemy7_00 = Enemyarray7(0)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_00.Visible = False
+                    Enemy7_00.Left = 20000
+                    Enemy7_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 1 Then
+                Enemy7_01 = Enemyarray7(1)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_01.Visible = False
+                    Enemy7_01.Left = 20000
+                    Enemy7_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 2 Then
+                Enemy7_02 = Enemyarray7(2)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_02.Visible = False
+                    Enemy7_02.Left = 20000
+                    Enemy7_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 3 Then
+                Enemy7_03 = Enemyarray7(3)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_03.Visible = False
+                    Enemy7_03.Left = 20000
+                    Enemy7_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 4 Then
+                Enemy7_04 = Enemyarray7(4)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_04.Visible = False
+                    Enemy7_04.Left = 20000
+                    Enemy7_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 5 Then
+                Enemy7_05 = Enemyarray7(5)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_05.Visible = False
+                    Enemy7_05.Left = 20000
+                    Enemy7_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 6 Then
+                Enemy7_06 = Enemyarray7(6)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_06.Visible = False
+                    Enemy7_06.Left = 20000
+                    Enemy7_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 7 Then
+                Enemy7_07 = Enemyarray7(7)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy7_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy7_07.Visible = False
+                    Enemy7_07.Left = 20000
+                    Enemy7_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy8 left"
+            If enemycount8 >= 0 Then
+                Enemy8_00 = Enemyarray8(0)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_00.Visible = False
+                    Enemy8_00.Left = 20000
+                    Enemy8_00.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 1 Then
+                Enemy8_01 = Enemyarray8(1)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_01.Visible = False
+                    Enemy8_01.Left = 20000
+                    Enemy8_01.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 2 Then
+                Enemy8_02 = Enemyarray8(2)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_02.Visible = False
+                    Enemy8_02.Left = 20000
+                    Enemy8_02.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 3 Then
+                Enemy8_03 = Enemyarray8(3)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_03.Visible = False
+                    Enemy8_03.Left = 20000
+                    Enemy8_03.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 4 Then
+                Enemy8_04 = Enemyarray8(4)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_04.Visible = False
+                    Enemy8_04.Left = 20000
+                    Enemy8_04.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 5 Then
+                Enemy8_05 = Enemyarray8(5)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_05.Visible = False
+                    Enemy8_05.Left = 20000
+                    Enemy8_05.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 6 Then
+                Enemy8_06 = Enemyarray8(6)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_06.Visible = False
+                    Enemy8_06.Left = 20000
+                    Enemy8_06.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 7 Then
+                Enemy8_07 = Enemyarray8(7)
+                If Bullet_arrayLeft(B).Bounds.IntersectsWith(Enemy8_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayLeft(B))
+                    Bullet_arrayLeft(B).Left = 2000
+                    Bullet_arrayLeft(B).Top = 2000
+                    Enemy8_07.Visible = False
+                    Enemy8_07.Left = 20000
+                    Enemy8_07.Top = 20000
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2260,6 +2950,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy00.Visible = False
                     Enemy00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 1 Then
@@ -2270,6 +2963,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy01.Visible = False
                     Enemy01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 2 Then
@@ -2280,6 +2976,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy02.Visible = False
                     Enemy02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 3 Then
@@ -2290,6 +2989,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy03.Visible = False
                     Enemy03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 4 Then
@@ -2300,6 +3002,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy04.Visible = False
                     Enemy04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 5 Then
@@ -2310,6 +3015,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy05.Visible = False
                     Enemy05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 6 Then
@@ -2320,6 +3028,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy06.Visible = False
                     Enemy06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 7 Then
@@ -2330,6 +3041,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy07.Visible = False
                     Enemy07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2342,6 +3056,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_00.Visible = False
                     Enemy2_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 1 Then
@@ -2352,6 +3069,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_01.Visible = False
                     Enemy2_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 2 Then
@@ -2362,6 +3082,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_02.Visible = False
                     Enemy2_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 3 Then
@@ -2372,6 +3095,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_03.Visible = False
                     Enemy2_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 4 Then
@@ -2382,6 +3108,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_04.Visible = False
                     Enemy2_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 5 Then
@@ -2392,6 +3121,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_05.Visible = False
                     Enemy2_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 6 Then
@@ -2402,6 +3134,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_06.Visible = False
                     Enemy2_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 7 Then
@@ -2412,6 +3147,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy2_07.Visible = False
                     Enemy2_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2424,6 +3162,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_00.Visible = False
                     Enemy3_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 1 Then
@@ -2434,6 +3175,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_01.Visible = False
                     Enemy3_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 2 Then
@@ -2444,6 +3188,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_02.Visible = False
                     Enemy3_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 3 Then
@@ -2454,6 +3201,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_03.Visible = False
                     Enemy3_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 4 Then
@@ -2464,6 +3214,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_04.Visible = False
                     Enemy3_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 5 Then
@@ -2474,6 +3227,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_05.Visible = False
                     Enemy3_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 6 Then
@@ -2484,6 +3240,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_06.Visible = False
                     Enemy3_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 7 Then
@@ -2494,6 +3253,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy3_07.Visible = False
                     Enemy3_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2506,6 +3268,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_00.Visible = False
                     Enemy4_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 1 Then
@@ -2516,6 +3281,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_01.Visible = False
                     Enemy4_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 2 Then
@@ -2526,6 +3294,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_02.Visible = False
                     Enemy4_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 3 Then
@@ -2536,6 +3307,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_03.Visible = False
                     Enemy4_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 4 Then
@@ -2546,6 +3320,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_04.Visible = False
                     Enemy4_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 5 Then
@@ -2556,6 +3333,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_05.Visible = False
                     Enemy4_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 6 Then
@@ -2566,6 +3346,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_06.Visible = False
                     Enemy4_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 7 Then
@@ -2576,6 +3359,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy4_07.Visible = False
                     Enemy4_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2588,6 +3374,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_00.Visible = False
                     Enemy5_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 1 Then
@@ -2598,6 +3387,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_01.Visible = False
                     Enemy5_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 2 Then
@@ -2608,6 +3400,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_02.Visible = False
                     Enemy5_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 3 Then
@@ -2618,6 +3413,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_03.Visible = False
                     Enemy5_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 4 Then
@@ -2628,6 +3426,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_04.Visible = False
                     Enemy5_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 5 Then
@@ -2638,6 +3439,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_05.Visible = False
                     Enemy5_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 6 Then
@@ -2648,6 +3452,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_06.Visible = False
                     Enemy5_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 7 Then
@@ -2658,6 +3465,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy5_07.Visible = False
                     Enemy5_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2670,6 +3480,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_00.Visible = False
                     Enemy6_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 1 Then
@@ -2680,6 +3493,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_01.Visible = False
                     Enemy6_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 2 Then
@@ -2690,6 +3506,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_02.Visible = False
                     Enemy6_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 3 Then
@@ -2700,6 +3519,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_03.Visible = False
                     Enemy6_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 4 Then
@@ -2710,6 +3532,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_04.Visible = False
                     Enemy6_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 5 Then
@@ -2720,6 +3545,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_05.Visible = False
                     Enemy6_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 6 Then
@@ -2730,6 +3558,9 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_06.Visible = False
                     Enemy6_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 7 Then
@@ -2740,6 +3571,221 @@ Public Class Form1
                     Bullet_arrayDown(C).Top = 2000
                     Enemy6_07.Visible = False
                     Enemy6_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy7 down"
+            If enemycount7 >= 0 Then
+                Enemy7_00 = Enemyarray7(0)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_00.Visible = False
+                    Enemy7_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 1 Then
+                Enemy7_01 = Enemyarray7(1)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_01.Visible = False
+                    Enemy7_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 2 Then
+                Enemy7_02 = Enemyarray7(2)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_02.Visible = False
+                    Enemy7_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 3 Then
+                Enemy7_03 = Enemyarray7(3)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_03.Visible = False
+                    Enemy7_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 4 Then
+                Enemy7_04 = Enemyarray7(4)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_04.Visible = False
+                    Enemy7_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 5 Then
+                Enemy7_05 = Enemyarray7(5)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_05.Visible = False
+                    Enemy7_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 6 Then
+                Enemy7_06 = Enemyarray7(6)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_06.Visible = False
+                    Enemy7_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 7 Then
+                Enemy7_07 = Enemyarray7(7)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy7_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy7_07.Visible = False
+                    Enemy7_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy8 down"
+            If enemycount8 >= 0 Then
+                Enemy8_00 = Enemyarray8(0)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_00.Visible = False
+                    Enemy8_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 1 Then
+                Enemy8_01 = Enemyarray8(1)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_01.Visible = False
+                    Enemy8_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 2 Then
+                Enemy8_02 = Enemyarray8(2)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_02.Visible = False
+                    Enemy8_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 3 Then
+                Enemy8_03 = Enemyarray8(3)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_03.Visible = False
+                    Enemy8_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 4 Then
+                Enemy8_04 = Enemyarray8(4)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_04.Visible = False
+                    Enemy8_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 5 Then
+                Enemy8_05 = Enemyarray8(5)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_05.Visible = False
+                    Enemy8_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 6 Then
+                Enemy8_06 = Enemyarray8(6)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_06.Visible = False
+                    Enemy8_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 7 Then
+                Enemy8_07 = Enemyarray8(7)
+                If Bullet_arrayDown(C).Bounds.IntersectsWith(Enemy8_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayDown(C))
+                    Bullet_arrayDown(C).Left = 2000
+                    Bullet_arrayDown(C).Top = 2000
+                    Enemy8_07.Visible = False
+                    Enemy8_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2760,6 +3806,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy00.Visible = False
                     Enemy00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 1 Then
@@ -2770,6 +3819,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy01.Visible = False
                     Enemy01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 2 Then
@@ -2780,6 +3832,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy02.Visible = False
                     Enemy02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 3 Then
@@ -2790,6 +3845,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy03.Visible = False
                     Enemy03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 4 Then
@@ -2800,6 +3858,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy04.Visible = False
                     Enemy04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 5 Then
@@ -2810,6 +3871,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy05.Visible = False
                     Enemy05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 6 Then
@@ -2820,6 +3884,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy06.Visible = False
                     Enemy06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount >= 7 Then
@@ -2830,6 +3897,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy07.Visible = False
                     Enemy07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2842,6 +3912,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_00.Visible = False
                     Enemy2_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 1 Then
@@ -2852,6 +3925,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_01.Visible = False
                     Enemy2_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 2 Then
@@ -2862,6 +3938,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_02.Visible = False
                     Enemy2_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 3 Then
@@ -2872,6 +3951,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_03.Visible = False
                     Enemy2_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 4 Then
@@ -2882,6 +3964,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_04.Visible = False
                     Enemy2_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 5 Then
@@ -2892,6 +3977,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_05.Visible = False
                     Enemy2_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 6 Then
@@ -2902,6 +3990,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_06.Visible = False
                     Enemy2_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount2 >= 7 Then
@@ -2912,6 +4003,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy2_07.Visible = False
                     Enemy2_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -2924,6 +4018,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_00.Visible = False
                     Enemy3_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 1 Then
@@ -2934,6 +4031,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_01.Visible = False
                     Enemy3_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 2 Then
@@ -2944,6 +4044,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_02.Visible = False
                     Enemy3_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 3 Then
@@ -2954,6 +4057,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_03.Visible = False
                     Enemy3_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 4 Then
@@ -2964,6 +4070,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_04.Visible = False
                     Enemy3_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 5 Then
@@ -2974,6 +4083,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_05.Visible = False
                     Enemy3_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 6 Then
@@ -2984,6 +4096,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_06.Visible = False
                     Enemy3_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount3 >= 7 Then
@@ -2994,6 +4109,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy3_07.Visible = False
                     Enemy3_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -3006,6 +4124,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_00.Visible = False
                     Enemy4_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 1 Then
@@ -3016,6 +4137,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_01.Visible = False
                     Enemy4_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 2 Then
@@ -3026,6 +4150,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_02.Visible = False
                     Enemy4_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 3 Then
@@ -3036,6 +4163,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_03.Visible = False
                     Enemy4_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 4 Then
@@ -3046,6 +4176,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_04.Visible = False
                     Enemy4_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 5 Then
@@ -3056,6 +4189,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_05.Visible = False
                     Enemy4_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 6 Then
@@ -3066,6 +4202,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_06.Visible = False
                     Enemy4_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount4 >= 7 Then
@@ -3076,6 +4215,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy4_07.Visible = False
                     Enemy4_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -3088,6 +4230,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_00.Visible = False
                     Enemy5_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 1 Then
@@ -3098,6 +4243,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_01.Visible = False
                     Enemy5_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 2 Then
@@ -3108,6 +4256,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_02.Visible = False
                     Enemy5_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 3 Then
@@ -3118,6 +4269,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_03.Visible = False
                     Enemy5_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 4 Then
@@ -3128,6 +4282,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_04.Visible = False
                     Enemy5_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 5 Then
@@ -3138,6 +4295,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_05.Visible = False
                     Enemy5_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 6 Then
@@ -3148,6 +4308,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_06.Visible = False
                     Enemy5_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount5 >= 7 Then
@@ -3158,6 +4321,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy5_07.Visible = False
                     Enemy5_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -3170,6 +4336,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_00.Visible = False
                     Enemy6_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 1 Then
@@ -3180,6 +4349,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_01.Visible = False
                     Enemy6_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 2 Then
@@ -3190,6 +4362,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_02.Visible = False
                     Enemy6_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 3 Then
@@ -3200,6 +4375,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_03.Visible = False
                     Enemy6_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 4 Then
@@ -3210,6 +4388,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_04.Visible = False
                     Enemy6_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 5 Then
@@ -3220,6 +4401,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_05.Visible = False
                     Enemy6_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 6 Then
@@ -3230,6 +4414,9 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_06.Visible = False
                     Enemy6_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
             If enemycount6 >= 7 Then
@@ -3240,6 +4427,221 @@ Public Class Form1
                     Bullet_arrayUp(D).Top = 2000
                     Enemy6_07.Visible = False
                     Enemy6_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy7 up"
+            If enemycount7 >= 0 Then
+                Enemy7_00 = Enemyarray7(0)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_00.Visible = False
+                    Enemy7_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 1 Then
+                Enemy7_01 = Enemyarray7(1)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_01.Visible = False
+                    Enemy7_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 2 Then
+                Enemy7_02 = Enemyarray7(2)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_02.Visible = False
+                    Enemy7_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 3 Then
+                Enemy7_03 = Enemyarray7(3)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_03.Visible = False
+                    Enemy7_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 4 Then
+                Enemy7_04 = Enemyarray7(4)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_04.Visible = False
+                    Enemy7_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 5 Then
+                Enemy7_05 = Enemyarray7(5)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_05.Visible = False
+                    Enemy7_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 6 Then
+                Enemy7_06 = Enemyarray7(6)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_06.Visible = False
+                    Enemy7_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount7 >= 7 Then
+                Enemy7_07 = Enemyarray7(7)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy7_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy7_07.Visible = False
+                    Enemy7_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+#End Region
+#Region "Enemy8 up"
+            If enemycount8 >= 0 Then
+                Enemy8_00 = Enemyarray8(0)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_00.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_00.Visible = False
+                    Enemy8_00.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 1 Then
+                Enemy8_01 = Enemyarray8(1)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_01.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_01.Visible = False
+                    Enemy8_01.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 2 Then
+                Enemy8_02 = Enemyarray8(2)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_02.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_02.Visible = False
+                    Enemy8_02.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 3 Then
+                Enemy8_03 = Enemyarray8(3)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_03.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_03.Visible = False
+                    Enemy8_03.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 4 Then
+                Enemy8_04 = Enemyarray8(4)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_04.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_04.Visible = False
+                    Enemy8_04.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 5 Then
+                Enemy8_05 = Enemyarray8(5)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_05.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_05.Visible = False
+                    Enemy8_05.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 6 Then
+                Enemy8_06 = Enemyarray8(6)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_06.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_06.Visible = False
+                    Enemy8_06.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
+                End If
+            End If
+            If enemycount8 >= 7 Then
+                Enemy8_07 = Enemyarray8(7)
+                If Bullet_arrayUp(D).Bounds.IntersectsWith(Enemy8_07.Bounds) Then
+                    Me.Controls.Remove(Bullet_arrayUp(D))
+                    Bullet_arrayUp(D).Left = 2000
+                    Bullet_arrayUp(D).Top = 2000
+                    Enemy8_07.Visible = False
+                    Enemy8_07.Location = New Point(20000, 20000)
+                    Killscore = 10 + Killscore
+                    Score = Scoretime * Killscore
+                    lblscore.Text = Score
                 End If
             End If
 #End Region
@@ -3250,8 +4652,8 @@ Public Class Form1
     Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
         Dim Number As Integer
         Dim Rng As Random = New Random()
-        Number = Rng.Next(1, 8)
-        'Number = 7
+        Number = Rng.Next(1, 9)
+        'Number = 8
         If Number = 1 Then
             Pos1()
         ElseIf Number = 2 Then
@@ -3266,6 +4668,8 @@ Public Class Form1
             Pos6()
         ElseIf Number = 7 Then
             Pos7()
+        ElseIf Number = 8 Then
+            Pos8()
         End If
     End Sub
     Sub Pos1()
@@ -3695,10 +5099,70 @@ Public Class Form1
             enemycount7 = 7
         End If
     End Sub
+    Sub Pos8()
+        Dim Enemy8 As New PictureBox
+        enemycount8 += 1
+        Testenemycount8()
+        If enemycountarray8 < 7 Then
+            Enemy8.Location = New Point(715, 310)
+            Enemy8.Size = New Size(36, 50)
+            Enemy8.Image = My.Resources.mario1
+            Enemy8.SizeMode = PictureBoxSizeMode.StretchImage
+            Enemy8.BackColor = Color.Transparent
+            Controls.Add(Enemy8)
+            CreateEnemy.Start()
+            enemycountarray8 += 1
+            Enemyarray8(enemycountarray8) = Enemy8
+        End If
+    End Sub
+    Sub Testenemycount8()
+        If enemycount8 = 8 Then
+            Enemy8_00 = Enemyarray8(0)
+            Enemy8_00.Visible = True
+            Enemy8_00.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 9 Then
+            Enemy8_01 = Enemyarray8(1)
+            Enemy8_01.Visible = True
+            Enemy8_01.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 10 Then
+            Enemy8_02 = Enemyarray8(2)
+            Enemy8_02.Visible = True
+            Enemy8_02.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 11 Then
+            Enemy8_03 = Enemyarray8(3)
+            Enemy8_03.Visible = True
+            Enemy8_03.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 12 Then
+            Enemy8_04 = Enemyarray8(4)
+            Enemy8_04.Visible = True
+            Enemy8_04.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 13 Then
+            Enemy8_05 = Enemyarray8(5)
+            Enemy8_05.Visible = True
+            Enemy8_05.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 14 Then
+            Enemy8_06 = Enemyarray8(6)
+            Enemy8_06.Visible = True
+            Enemy8_06.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 15 Then
+            Enemy8_07 = Enemyarray8(7)
+            Enemy8_07.Visible = True
+            Enemy8_07.Location = New Point(715, 400)
+        End If
+        If enemycount8 = 15 Then
+            enemycount8 = 7
+        End If
+    End Sub
     Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
         Dim F As Integer
-        Dim Z As Integer = 1
-        Dim Y As Integer = 1
+        Dim Z As Integer = 2
 
 
 
@@ -3835,170 +5299,302 @@ Public Class Form1
         Dim I As Integer
         For I = 0 To enemycountarray4
             If I = 0 Then
-                Enemyarray4(0).Top -= Y
+                Enemyarray4(0).Top -= Z
             End If
         Next
         For I = 1 To enemycountarray4
             If I = 1 Then
-                Enemyarray4(1).Top -= Y
+                Enemyarray4(1).Top -= Z
             End If
         Next
         For I = 2 To enemycountarray4
             If I = 2 Then
-                Enemyarray4(2).Top -= Y
+                Enemyarray4(2).Top -= Z
             End If
         Next
         For I = 3 To enemycountarray4
             If I = 3 Then
-                Enemyarray4(3).Top -= Y
+                Enemyarray4(3).Top -= Z
             End If
         Next
         For I = 4 To enemycountarray4
             If I = 4 Then
-                Enemyarray4(4).Top -= Y
+                Enemyarray4(4).Top -= Z
             End If
         Next
         For I = 5 To enemycountarray4
             If I = 5 Then
-                Enemyarray4(5).Top -= Y
+                Enemyarray4(5).Top -= Z
             End If
         Next
         For I = 6 To enemycountarray4
             If I = 6 Then
-                Enemyarray4(6).Top -= Y
+                Enemyarray4(6).Top -= Z
             End If
         Next
         For I = 7 To enemycountarray4
             If I = 7 Then
-                Enemyarray4(7).Top -= Y
+                Enemyarray4(7).Top -= Z
             End If
         Next
 
         Dim J As Integer
         For J = 0 To enemycountarray5
             If J = 0 Then
-                Enemyarray5(0).Top -= Y
+                Enemyarray5(0).Top -= Z
             End If
         Next
         For J = 1 To enemycountarray5
             If J = 1 Then
-                Enemyarray5(1).Top -= Y
+                Enemyarray5(1).Top -= Z
             End If
         Next
         For J = 2 To enemycountarray5
             If J = 2 Then
-                Enemyarray5(2).Top -= Y
+                Enemyarray5(2).Top -= Z
             End If
         Next
         For J = 3 To enemycountarray5
             If J = 3 Then
-                Enemyarray5(3).Top -= Y
+                Enemyarray5(3).Top -= Z
             End If
         Next
         For J = 4 To enemycountarray5
             If J = 4 Then
-                Enemyarray5(4).Top -= Y
+                Enemyarray5(4).Top -= Z
             End If
         Next
         For J = 5 To enemycountarray5
             If J = 5 Then
-                Enemyarray5(5).Top -= Y
+                Enemyarray5(5).Top -= Z
             End If
         Next
         For J = 6 To enemycountarray5
             If J = 6 Then
-                Enemyarray5(6).Top -= Y
+                Enemyarray5(6).Top -= Z
             End If
         Next
         For J = 7 To enemycountarray5
             If J = 7 Then
-                Enemyarray5(7).Top -= Y
+                Enemyarray5(7).Top -= Z
             End If
         Next
 
         Dim K As Integer
         For K = 0 To enemycountarray6
             If K = 0 Then
-                Enemyarray6(0).Top -= Y
+                Enemyarray6(0).Top -= Z
             End If
         Next
         For K = 1 To enemycountarray6
             If K = 1 Then
-                Enemyarray6(1).Top -= Y
+                Enemyarray6(1).Top -= Z
             End If
         Next
         For K = 2 To enemycountarray6
             If K = 2 Then
-                Enemyarray6(2).Top -= Y
+                Enemyarray6(2).Top -= Z
             End If
         Next
         For K = 3 To enemycountarray6
             If K = 3 Then
-                Enemyarray6(3).Top -= Y
+                Enemyarray6(3).Top -= Z
             End If
         Next
         For K = 4 To enemycountarray6
             If K = 4 Then
-                Enemyarray6(4).Top -= Y
+                Enemyarray6(4).Top -= Z
             End If
         Next
         For K = 5 To enemycountarray6
             If K = 5 Then
-                Enemyarray6(5).Top -= Y
+                Enemyarray6(5).Top -= Z
             End If
         Next
         For K = 6 To enemycountarray6
             If K = 6 Then
-                Enemyarray6(6).Top -= Y
+                Enemyarray6(6).Top -= Z
             End If
         Next
         For K = 7 To enemycountarray6
             If K = 7 Then
-                Enemyarray6(7).Top -= Y
+                Enemyarray6(7).Top -= Z
             End If
         Next
 
         Dim L As Integer
         For L = 0 To enemycountarray7
             If L = 0 Then
-                Enemyarray7(0).Left -= Y
+                Enemyarray7(0).Left -= Z
             End If
         Next
         For L = 1 To enemycountarray7
             If L = 1 Then
-                Enemyarray7(1).Left -= Y
+                Enemyarray7(1).Left -= Z
             End If
         Next
         For L = 2 To enemycountarray7
             If L = 2 Then
-                Enemyarray7(2).Left -= Y
+                Enemyarray7(2).Left -= Z
             End If
         Next
         For L = 3 To enemycountarray7
             If L = 3 Then
-                Enemyarray7(3).Left -= Y
+                Enemyarray7(3).Left -= Z
             End If
         Next
         For L = 4 To enemycountarray7
             If L = 4 Then
-                Enemyarray7(4).Left -= Y
+                Enemyarray7(4).Left -= Z
             End If
         Next
         For L = 5 To enemycountarray7
             If L = 5 Then
-                Enemyarray7(5).Left -= Y
+                Enemyarray7(5).Left -= Z
             End If
         Next
         For L = 6 To enemycountarray7
             If L = 6 Then
-                Enemyarray7(6).Left -= Y
+                Enemyarray7(6).Left -= Z
             End If
         Next
         For L = 7 To enemycountarray7
             If L = 7 Then
-                Enemyarray7(7).Left -= Y
+                Enemyarray7(7).Left -= Z
             End If
         Next
 
+        Dim M As Integer
+        For M = 0 To enemycountarray8
+            If M = 0 Then
+                Enemyarray8(0).Left -= Z
+            End If
+        Next
+        For M = 1 To enemycountarray8
+            If M = 1 Then
+                Enemyarray8(1).Left -= Z
+            End If
+        Next
+        For M = 2 To enemycountarray8
+            If M = 2 Then
+                Enemyarray8(2).Left -= Z
+            End If
+        Next
+        For M = 3 To enemycountarray8
+            If M = 3 Then
+                Enemyarray8(3).Left -= Z
+            End If
+        Next
+        For M = 4 To enemycountarray8
+            If M = 4 Then
+                Enemyarray8(4).Left -= Z
+            End If
+        Next
+        For M = 5 To enemycountarray8
+            If M = 5 Then
+                Enemyarray8(5).Left -= Z
+            End If
+        Next
+        For M = 6 To enemycountarray8
+            If M = 6 Then
+                Enemyarray8(6).Left -= Z
+            End If
+        Next
+        For M = 7 To enemycountarray8
+            If M = 7 Then
+                Enemyarray8(7).Left -= Z
+            End If
+        Next
+
+    End Sub
+    Sub Restartbutton()
+        If Restartbuttonpush = True Then
+            Restartbuttonpush = False
+            Me.Controls.Remove(Enemy00)
+            Me.Controls.Remove(Enemy01)
+            Me.Controls.Remove(Enemy02)
+            Me.Controls.Remove(Enemy03)
+            Me.Controls.Remove(Enemy04)
+            Me.Controls.Remove(Enemy05)
+            Me.Controls.Remove(Enemy06)
+            Me.Controls.Remove(Enemy07)
+            Me.Controls.Remove(Enemy2_00)
+            Me.Controls.Remove(Enemy2_01)
+            Me.Controls.Remove(Enemy2_02)
+            Me.Controls.Remove(Enemy2_03)
+            Me.Controls.Remove(Enemy2_04)
+            Me.Controls.Remove(Enemy2_05)
+            Me.Controls.Remove(Enemy2_06)
+            Me.Controls.Remove(Enemy2_07)
+            Me.Controls.Remove(Enemy3_00)
+            Me.Controls.Remove(Enemy3_01)
+            Me.Controls.Remove(Enemy3_02)
+            Me.Controls.Remove(Enemy3_03)
+            Me.Controls.Remove(Enemy3_04)
+            Me.Controls.Remove(Enemy3_05)
+            Me.Controls.Remove(Enemy3_06)
+            Me.Controls.Remove(Enemy3_07)
+            Me.Controls.Remove(Enemy4_00)
+            Me.Controls.Remove(Enemy4_01)
+            Me.Controls.Remove(Enemy4_02)
+            Me.Controls.Remove(Enemy4_03)
+            Me.Controls.Remove(Enemy4_04)
+            Me.Controls.Remove(Enemy4_05)
+            Me.Controls.Remove(Enemy4_06)
+            Me.Controls.Remove(Enemy4_07)
+            Me.Controls.Remove(Enemy5_00)
+            Me.Controls.Remove(Enemy5_01)
+            Me.Controls.Remove(Enemy5_02)
+            Me.Controls.Remove(Enemy5_03)
+            Me.Controls.Remove(Enemy5_04)
+            Me.Controls.Remove(Enemy5_05)
+            Me.Controls.Remove(Enemy5_06)
+            Me.Controls.Remove(Enemy5_07)
+            Me.Controls.Remove(Enemy6_00)
+            Me.Controls.Remove(Enemy6_01)
+            Me.Controls.Remove(Enemy6_02)
+            Me.Controls.Remove(Enemy6_03)
+            Me.Controls.Remove(Enemy6_04)
+            Me.Controls.Remove(Enemy6_05)
+            Me.Controls.Remove(Enemy6_06)
+            Me.Controls.Remove(Enemy6_07)
+            Me.Controls.Remove(Enemy7_00)
+            Me.Controls.Remove(Enemy7_01)
+            Me.Controls.Remove(Enemy7_02)
+            Me.Controls.Remove(Enemy7_03)
+            Me.Controls.Remove(Enemy7_04)
+            Me.Controls.Remove(Enemy7_05)
+            Me.Controls.Remove(Enemy7_06)
+            Me.Controls.Remove(Enemy7_07)
+            Me.Controls.Remove(Enemy8_00)
+            Me.Controls.Remove(Enemy8_01)
+            Me.Controls.Remove(Enemy8_02)
+            Me.Controls.Remove(Enemy8_03)
+            Me.Controls.Remove(Enemy8_04)
+            Me.Controls.Remove(Enemy8_05)
+            Me.Controls.Remove(Enemy8_06)
+            Me.Controls.Remove(Enemy8_07)
+            Spawn.Enabled = True
+            CreateEnemy.Enabled = True
+            movement.Enabled = True
+            C1.Image = PokDown
+            C1.Location = New Point(386, 199)
+            moveUp = False
+            moveDown = False
+            moveLeft = False
+            moveRight = False
+            Animation_Down.Enabled = False
+            Animation_Up.Enabled = False
+            Animation_Right.Enabled = False
+            Animation_Left.Enabled = False
+            Scoretime = 0
+            Score = 0
+            lblscore.Text = 0
+            Killscore = 0
+        End If
+    End Sub
+
+    Private Sub ScorezTimer_Tick(sender As Object, e As EventArgs) Handles ScorezTimer.Tick
+        Scoretime = 1 + Scoretime
     End Sub
 End Class

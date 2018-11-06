@@ -37,7 +37,9 @@ Partial Class Form1
         Me.Right_boundary = New System.Windows.Forms.PictureBox()
         Me.C1 = New System.Windows.Forms.PictureBox()
         Me.CreateEnemy = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.label1 = New System.Windows.Forms.Label()
+        Me.ScorezTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.lblscore = New System.Windows.Forms.Label()
         CType(Me.Bottom_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Top_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Left_boundary, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +79,7 @@ Partial Class Form1
         '
         'Spawn
         '
-        Me.Spawn.Interval = 1000
+        Me.Spawn.Interval = 500
         '
         'Bottom_boundary
         '
@@ -119,7 +121,7 @@ Partial Class Form1
         '
         Me.C1.BackColor = System.Drawing.Color.Transparent
         Me.C1.Image = Global.SpriteMovement.My.Resources.Resources.Pokemon_Down_1
-        Me.C1.Location = New System.Drawing.Point(386, 199)
+        Me.C1.Location = New System.Drawing.Point(395, 201)
         Me.C1.Name = "C1"
         Me.C1.Size = New System.Drawing.Size(29, 38)
         Me.C1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -130,10 +132,30 @@ Partial Class Form1
         '
         Me.CreateEnemy.Interval = 1
         '
-        'Timer1
+        'label1
         '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 1
+        Me.label1.AutoSize = True
+        Me.label1.ForeColor = System.Drawing.Color.Maroon
+        Me.label1.Location = New System.Drawing.Point(380, 7)
+        Me.label1.Name = "label1"
+        Me.label1.Size = New System.Drawing.Size(53, 13)
+        Me.label1.TabIndex = 5
+        Me.label1.Text = "SCORE : "
+        '
+        'ScorezTimer
+        '
+        Me.ScorezTimer.Enabled = True
+        Me.ScorezTimer.Interval = 1000
+        '
+        'lblscore
+        '
+        Me.lblscore.AutoSize = True
+        Me.lblscore.ForeColor = System.Drawing.Color.Maroon
+        Me.lblscore.Location = New System.Drawing.Point(427, 8)
+        Me.lblscore.Name = "lblscore"
+        Me.lblscore.Size = New System.Drawing.Size(13, 13)
+        Me.lblscore.TabIndex = 7
+        Me.lblscore.Text = "0"
         '
         'Form1
         '
@@ -141,6 +163,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(816, 480)
+        Me.Controls.Add(Me.lblscore)
+        Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.Bottom_boundary)
         Me.Controls.Add(Me.Top_boundary)
         Me.Controls.Add(Me.Left_boundary)
@@ -158,6 +182,7 @@ Partial Class Form1
         CType(Me.Right_boundary, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -175,5 +200,7 @@ Partial Class Form1
     Friend WithEvents bullet_movement As Timer
     Friend WithEvents Spawn As Timer
     Friend WithEvents CreateEnemy As Timer
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents label1 As Label
+    Friend WithEvents ScorezTimer As Timer
+    Friend WithEvents lblscore As Label
 End Class

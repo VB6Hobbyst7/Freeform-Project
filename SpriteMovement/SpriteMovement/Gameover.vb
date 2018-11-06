@@ -5,9 +5,14 @@ Class Gameover
         End
     End Sub
 
+    Private Sub Gameover_Load(sender As Object, e As EventArgs) Handles Me.Load
+        lblscoregameover.Text = Score
+    End Sub
+
     Private Sub Restart_Click(sender As Object, e As EventArgs) Handles Restart.Click
-        enemycountarray = -1
+        Restartbuttonpush = True
         enemycount = -1
+        enemycountarray = -1
         enemycountarray2 = -1
         enemycount2 = -1
         enemycountarray3 = -1
@@ -24,6 +29,8 @@ Class Gameover
         enemycount8 = -1
         enemycountarray9 = -1
         enemycount9 = -1
+        Me.Hide()
+
 
     End Sub
 End Class
