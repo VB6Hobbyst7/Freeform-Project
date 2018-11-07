@@ -1,5 +1,6 @@
 ﻿'"random" code is in system
 Imports SpriteMovement.Form1.GlobalVariables
+'"random" code is in system
 Imports System
 Public Class Form1
     Public Class GlobalVariables
@@ -129,6 +130,38 @@ Public Class Form1
         Public Shared Enemy8_05 As New PictureBox
         Public Shared Enemy8_06 As New PictureBox
         Public Shared Enemy8_07 As New PictureBox
+        Public Shared Enemy9_00 As New PictureBox
+        Public Shared Enemy9_01 As New PictureBox
+        Public Shared Enemy9_02 As New PictureBox
+        Public Shared Enemy9_03 As New PictureBox
+        Public Shared Enemy9_04 As New PictureBox
+        Public Shared Enemy9_05 As New PictureBox
+        Public Shared Enemy9_06 As New PictureBox
+        Public Shared Enemy9_07 As New PictureBox
+        Public Shared Enemy10_00 As New PictureBox
+        Public Shared Enemy10_01 As New PictureBox
+        Public Shared Enemy10_02 As New PictureBox
+        Public Shared Enemy10_03 As New PictureBox
+        Public Shared Enemy10_04 As New PictureBox
+        Public Shared Enemy10_05 As New PictureBox
+        Public Shared Enemy10_06 As New PictureBox
+        Public Shared Enemy10_07 As New PictureBox
+        Public Shared Enemy11_00 As New PictureBox
+        Public Shared Enemy11_01 As New PictureBox
+        Public Shared Enemy11_02 As New PictureBox
+        Public Shared Enemy11_03 As New PictureBox
+        Public Shared Enemy11_04 As New PictureBox
+        Public Shared Enemy11_05 As New PictureBox
+        Public Shared Enemy11_06 As New PictureBox
+        Public Shared Enemy11_07 As New PictureBox
+        Public Shared Enemy12_00 As New PictureBox
+        Public Shared Enemy12_01 As New PictureBox
+        Public Shared Enemy12_02 As New PictureBox
+        Public Shared Enemy12_03 As New PictureBox
+        Public Shared Enemy12_04 As New PictureBox
+        Public Shared Enemy12_05 As New PictureBox
+        Public Shared Enemy12_06 As New PictureBox
+        Public Shared Enemy12_07 As New PictureBox
 #End Region
         Dim GameOverIsOpen As Boolean = False
         Public Shared spacecounter As Integer = 0
@@ -301,6 +334,15 @@ Public Class Form1
         Enemy7_05 = Enemyarray7(5)
         Enemy7_06 = Enemyarray7(6)
         Enemy7_07 = Enemyarray7(7)
+        Enemy8_00 = Enemyarray8(0)
+        Enemy8_01 = Enemyarray8(1)
+        Enemy8_02 = Enemyarray8(2)
+        Enemy8_03 = Enemyarray8(3)
+        Enemy8_04 = Enemyarray8(4)
+        Enemy8_05 = Enemyarray8(5)
+        Enemy8_06 = Enemyarray8(6)
+        Enemy8_07 = Enemyarray8(7)
+
 
         If enemycount >= 0 Then
             Enemy00 = Enemyarray(0)
