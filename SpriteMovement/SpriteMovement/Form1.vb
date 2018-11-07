@@ -1,9 +1,10 @@
-﻿'"random" code is in system
+'"GLobalVariables" public class that allows me to share variables with the other forms
 Imports SpriteMovement.Form1.GlobalVariables
 '"random" code is in system
 Imports System
 Public Class Form1
     Public Class GlobalVariables
+        ' boolean values that tell whether or not moveRight, moveLeft, moverUp, moveDown
         Public Shared moveRight As Boolean
         Public Shared moveLeft As Boolean
         Public Shared moveUp As Boolean
@@ -183,6 +184,7 @@ Public Class Form1
     End Sub
 
 #Region "Movement & Animation"
+"Tests if a key is pressed down
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
 
         Select Case e.KeyValue
@@ -199,6 +201,7 @@ Public Class Form1
                 moveDown = True
                 Animation_Down.Enabled = True
             Case Keys.Space
+'makes it where you can only shoot by clicking space and you cant hold it down. The image is also tested to k ow what direction it it looing in so that it shoots in the right direction
                 spacecounter += 1
                 If C1.Image Is PokRight Or C1.Image Is PokRight2 Or C1.Image Is PokRight3 Or C1.Image Is PokRight4 Then
                     If spacecounter = 1 Then
@@ -222,7 +225,7 @@ Public Class Form1
                 End If
         End Select
     End Sub
-
+'Tests if a key is let go of
     Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
         Select Case e.KeyValue
             Case Keys.Right
@@ -245,7 +248,7 @@ Public Class Form1
                 spacecounter = 0
         End Select
     End Sub
-
+' when the move booleans equals true then it moves by 3 
     Private Sub movement_Tick(sender As Object, e As EventArgs) Handles movement.Tick
         If moveRight = True Then
             C1.Left = C1.Left + 3
@@ -263,7 +266,7 @@ Public Class Form1
             C1.Top = C1.Top + 3
         End If
     End Sub
-
+'Loads these on start up
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         C1.Image = PokDown
@@ -277,6 +280,7 @@ Public Class Form1
 
 
     End Sub
+'Sets each array value equal to enemy variables and also test if the charcter gets hit by an enemy and shows gameover screen
     Sub setArray()
         Enemy00 = Enemyarray(0)
         Enemy01 = Enemyarray(1)
@@ -1049,6 +1053,7 @@ Public Class Form1
             End If
         End If
     End Sub
+' this makes the charcter have an animation
     Sub AnimationChar_right()
         Anichar_Right -= 1
         Select Case Anichar_Right
@@ -1062,7 +1067,7 @@ Public Class Form1
                 C1.Image = PokRight4
         End Select
     End Sub
-
+'This is started and stoped depending on if the chacrter is moving
     Private Sub Animation_right_Tick(sender As Object, e As EventArgs) Handles Animation_Right.Tick
         AnimationChar_right()
         While Anichar_Right < 1
@@ -1071,7 +1076,7 @@ Public Class Form1
             End If
         End While
     End Sub
-
+    'This is started and stoped depending on if the chacrter is moving
     Private Sub Animation_Up_Tick(sender As Object, e As EventArgs) Handles Animation_Up.Tick
         AnimationChar_Up()
         While Anichar_Up < 1
@@ -1138,7 +1143,7 @@ Public Class Form1
         End Select
     End Sub
 #End Region
-
+'tests if the charcter hits the bounds picture box and move it the opposite direction allowing it not to pass. It also constantly run setArray() and Restartbutton()
     Private Sub Bounds_Tick(sender As Object, e As EventArgs) Handles Bounds.Tick
         setArray()
         Restartbutton()
@@ -1159,6 +1164,7 @@ Public Class Form1
         End If
     End Sub
 #Region "Shooting"
+'Creates a picture box when subroutine is ran that resembles a bullet and adds the bullet to the unlimited array
     Sub Shootright()
         Dim Shoot_right As New PictureBox
         Shoot_right.Top = C1.Top + 15
@@ -1209,12 +1215,14 @@ Public Class Form1
     End Sub
     Private Sub bullet_movement_Tick(sender As Object, e As EventArgs) Handles bullet_movement.Tick
         Dim A As Integer
+'shoots the bullet in to a certian direction adn constnatly moves it 
         For A = 0 To BulletNumberRight
             BulletarrayRight(A).Left += 10
             If BulletarrayRight(A).Bounds.IntersectsWith(Right_boundary.Bounds) Then
                 Me.Controls.Remove(BulletarrayRight(A))
             End If
 #Region "Enemy1 right"
+' all of these test if the bullet colides with an enemy and hides the enemy and moves them and adds to the score
             If enemycount >= 0 Then
                 Enemy00 = Enemyarray(0)
                 If BulletarrayRight(A).Bounds.IntersectsWith(Enemy00.Bounds) Then
@@ -4690,7 +4698,7 @@ Public Class Form1
         Next
     End Sub
 #End Region
-
+' each time the timer ticks, a random number is generated between the values and dependng on the number randomly spawns in differnt positions.
     Private Sub Spawn_Tick(sender As Object, e As EventArgs) Handles Spawn.Tick
         Dim Number As Integer
         Dim Rng As Random = New Random()
@@ -4714,6 +4722,7 @@ Public Class Form1
             Pos8()
         End If
     End Sub
+' creates a picture box that is an enemy at the first position and then stops spawnign after there is 8 enmimies and then run Testenemycount()
     Sub Pos1()
         Dim Enemy1 As New PictureBox
         enemycount += 1
@@ -4730,6 +4739,7 @@ Public Class Form1
             Enemyarray(enemycountarray) = Enemy1
         End If
     End Sub
+' if enemycount = 8 - 15 then it resets the position of the enimy that went off the screen. this all works the same for all hte positions but they spanw at differnt spots.
     Sub Testenemycount()
         If enemycount = 8 Then
             Enemy00 = Enemyarray(0)
@@ -5202,6 +5212,7 @@ Public Class Form1
             enemycount8 = 7
         End If
     End Sub
+' createEnemy timer runs evreytick and makes the enemy move in a certain  direction.
     Private Sub CreateEnemy_Tick(sender As Object, e As EventArgs) Handles CreateEnemy.Tick
         Dim F As Integer
         Dim Z As Integer = 2
@@ -5549,6 +5560,7 @@ Public Class Form1
         Next
 
     End Sub
+'when the restart button after gameover runs this tests if it is clicked and if it is it removes all enimes and basically starts back tot hebstart allowing you to play again.
     Sub Restartbutton()
         If Restartbuttonpush = True Then
             Restartbuttonpush = False
@@ -5635,7 +5647,7 @@ Public Class Form1
             Killscore = 0
         End If
     End Sub
-
+'determins the scoretime whcih is then multipled by 10 everytime you get a kill in the other timer. This makes it where the time s factored into the score. the longer you stay alive and get kills the more points you will have.
     Private Sub ScorezTimer_Tick(sender As Object, e As EventArgs) Handles ScorezTimer.Tick
         Scoretime = 1 + Scoretime
     End Sub
